@@ -1,0 +1,564 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1, maximum-scale=2"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.625 -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:normal;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}h1{margin-left:0;margin-right:0;margin-top:2.4375rem;padding-bottom:calc(0.40625rem - 1px);padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.21875rem;color:inherit;font-family:Catamaran;font-weight:800;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.2;border-bottom:1px solid hsla(0,0%,0%,0.07);}h2{margin-left:0;margin-right:0;margin-top:56px;padding-bottom:calc(0.40625rem - 1px);padding-left:0;padding-right:0;padding-top:0;margin-bottom:20px;color:inherit;font-family:Catamaran;font-weight:700;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.2;border-bottom:1px solid hsla(0,0%,0%,0.07);}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:hsla(0,0%,0%,0.53);font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}ul{margin-left:1.625rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:6px;list-style-position:outside;list-style-image:none;}ol{margin-left:1.625rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;font-size:0.85rem;line-height:1.625rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;font-size:1rem;line-height:1.625rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}blockquote{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:calc(0.8125rem - 1px);padding-right:0;padding-top:0;margin-bottom:0.8125rem;border-left:4px solid hsla(0,0%,0%,0.13);color:hsla(0,0%,0%,0.53);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(0.8125rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}b{font-weight:600;}strong{font-weight:600;}dt{font-weight:600;}th{font-weight:600;}li{margin-bottom:2px;}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.625rem;margin-bottom:calc(0.8125rem / 2);margin-top:calc(0.8125rem / 2);}li > ul{margin-left:1.625rem;margin-bottom:calc(0.8125rem / 2);margin-top:calc(0.8125rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(0.8125rem / 2);}code{font-size:0.85rem;line-height:1.625rem;}kbd{font-size:0.85rem;line-height:1.625rem;}samp{font-size:0.85rem;line-height:1.625rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.08333rem;padding-right:1.08333rem;padding-top:0.8125rem;padding-bottom:calc(0.8125rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}h3,h4,h5,h6{margin-bottom:0.8125rem;margin-top:1.625rem;}ol,ul{margin-left:2.03125rem;}li>ol,li>ul{margin-left:2.03125rem;}a{color:#0687f0;text-decoration:none;box-shadow:none;}a:hover,a:active{text-decoration:underline;}a.gatsby-resp-image-link{box-shadow:none;text-decoration:none;}a:hover{text-decoration:none;}</style><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=2ab13789f6242d0cb3e1aa3a75e88582f3be76c2"/><style type="text/css">
+    .anchor {
+      float: left;
+      padding-right: 4px;
+      margin-left: -20px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var offset = element.offsetTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="shortcut icon" href="/icons/icon-48x48.png?v=2ab13789f6242d0cb3e1aa3a75e88582f3be76c2"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=2ab13789f6242d0cb3e1aa3a75e88582f3be76c2"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=2ab13789f6242d0cb3e1aa3a75e88582f3be76c2"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=2ab13789f6242d0cb3e1aa3a75e88582f3be76c2"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=2ab13789f6242d0cb3e1aa3a75e88582f3be76c2"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=2ab13789f6242d0cb3e1aa3a75e88582f3be76c2"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=2ab13789f6242d0cb3e1aa3a75e88582f3be76c2"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=2ab13789f6242d0cb3e1aa3a75e88582f3be76c2"/><meta name="generator" content="Gatsby 2.2.8"/><style data-href="/styles.6709749d0a729b003adb.css">@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css);.custom-hr{margin:64px;background:linear-gradient(72deg,#291e95,#cc007a);border:none;height:2px}@font-face{font-family:Noto Sans KR;font-style:normal;font-display:swap;font-weight:100;src:local("Noto Sans KR Thin "),local("Noto Sans KR-Thin"),url(/static/noto-sans-kr-latin-100-2de137ca3e12ea146ee47485a97f1e78.woff2) format("woff2"),url(/static/noto-sans-kr-latin-100-b965647685dd9fc531d1f8a1cc25e024.woff) format("woff")}@font-face{font-family:Noto Sans KR;font-style:normal;font-display:swap;font-weight:300;src:local("Noto Sans KR Light "),local("Noto Sans KR-Light"),url(/static/noto-sans-kr-latin-300-4f773a0fce88aa857d70b56c5b0a1d26.woff2) format("woff2"),url(/static/noto-sans-kr-latin-300-ee87751dac814562bac316d848e35748.woff) format("woff")}@font-face{font-family:Noto Sans KR;font-style:normal;font-display:swap;font-weight:400;src:local("Noto Sans KR Regular "),local("Noto Sans KR-Regular"),url(/static/noto-sans-kr-latin-400-be09f2ced7ff9fa6eda5f0416e2fc840.woff2) format("woff2"),url(/static/noto-sans-kr-latin-400-4c50be0fe5b21a153b8e40a392c2d3fe.woff) format("woff")}@font-face{font-family:Noto Sans KR;font-style:normal;font-display:swap;font-weight:500;src:local("Noto Sans KR Medium "),local("Noto Sans KR-Medium"),url(/static/noto-sans-kr-latin-500-416698c2fc4b3951f8d63d3d2ae23900.woff2) format("woff2"),url(/static/noto-sans-kr-latin-500-28601458e118110e494903a1fcd6dcf5.woff) format("woff")}@font-face{font-family:Noto Sans KR;font-style:normal;font-display:swap;font-weight:700;src:local("Noto Sans KR Bold "),local("Noto Sans KR-Bold"),url(/static/noto-sans-kr-latin-700-04e782e08729f3725ae5a9c95da0c8ba.woff2) format("woff2"),url(/static/noto-sans-kr-latin-700-b9e989a96027f839a9569d2d011e0b71.woff) format("woff")}@font-face{font-family:Noto Sans KR;font-style:normal;font-display:swap;font-weight:900;src:local("Noto Sans KR Black "),local("Noto Sans KR-Black"),url(/static/noto-sans-kr-latin-900-c41f1395489a117ca36d550142a1695f.woff2) format("woff2"),url(/static/noto-sans-kr-latin-900-589f5fbf84d9dc9984a969bae969fd60.woff) format("woff")}@font-face{font-family:Catamaran;font-style:normal;font-display:swap;font-weight:100;src:local("Catamaran Thin "),local("Catamaran-Thin"),url(/static/catamaran-latin-100-3570195a7b5f619dd9b2419d8fa3f089.woff2) format("woff2"),url(/static/catamaran-latin-100-e82908f57f6d2f23eb9876b2d6868195.woff) format("woff")}@font-face{font-family:Catamaran;font-style:normal;font-display:swap;font-weight:200;src:local("Catamaran Extra Light "),local("Catamaran-Extra Light"),url(/static/catamaran-latin-200-987ea210308405ac77ba2f36430a70c9.woff2) format("woff2"),url(/static/catamaran-latin-200-bb5993d2f001b739bb9ab7c3ed9725c3.woff) format("woff")}@font-face{font-family:Catamaran;font-style:normal;font-display:swap;font-weight:300;src:local("Catamaran Light "),local("Catamaran-Light"),url(/static/catamaran-latin-300-2b8a4bd13e9d5ba755f010f8732b0bb6.woff2) format("woff2"),url(/static/catamaran-latin-300-c2696c65c33dcf37871b72bad51ee1ce.woff) format("woff")}@font-face{font-family:Catamaran;font-style:normal;font-display:swap;font-weight:400;src:local("Catamaran Regular "),local("Catamaran-Regular"),url(/static/catamaran-latin-400-640947b787a38ec35d097129637d9130.woff2) format("woff2"),url(/static/catamaran-latin-400-97e5bc807a3e915e3fbf40ce5fcb1128.woff) format("woff")}@font-face{font-family:Catamaran;font-style:normal;font-display:swap;font-weight:500;src:local("Catamaran Medium "),local("Catamaran-Medium"),url(/static/catamaran-latin-500-884483dd213f37ae3b5c98f73dd190a5.woff2) format("woff2"),url(/static/catamaran-latin-500-412cf386e31213e3601cb2132b9c4c2d.woff) format("woff")}@font-face{font-family:Catamaran;font-style:normal;font-display:swap;font-weight:600;src:local("Catamaran SemiBold "),local("Catamaran-SemiBold"),url(/static/catamaran-latin-600-eb6ebda25331e50d3f42c45a41f613bb.woff2) format("woff2"),url(/static/catamaran-latin-600-215c58c6114e0556cb1c332c0fda463a.woff) format("woff")}@font-face{font-family:Catamaran;font-style:normal;font-display:swap;font-weight:700;src:local("Catamaran Bold "),local("Catamaran-Bold"),url(/static/catamaran-latin-700-3196f49881b324fa5a5f937875cc380f.woff2) format("woff2"),url(/static/catamaran-latin-700-05f6e51c518dd3b521b258e5c05d0e72.woff) format("woff")}@font-face{font-family:Catamaran;font-style:normal;font-display:swap;font-weight:800;src:local("Catamaran ExtraBold "),local("Catamaran-ExtraBold"),url(/static/catamaran-latin-800-601b1d0f1b78fd65c3205b2c004bbe60.woff2) format("woff2"),url(/static/catamaran-latin-800-3b1675e4ede7e86ec79fa84c1203908e.woff) format("woff")}@font-face{font-family:Catamaran;font-style:normal;font-display:swap;font-weight:900;src:local("Catamaran Black "),local("Catamaran-Black"),url(/static/catamaran-latin-900-6bb5f96614acb7754020b922e1a63d24.woff2) format("woff2"),url(/static/catamaran-latin-900-79292dba48851cc3a212863c860d8f09.woff) format("woff")}.github{float:right;padding:14px;opacity:.6}.top{position:relative;width:100%;height:60px;background:linear-gradient(72deg,#291e95,#cc007a)}.top .link{display:inline-block;font-size:28px;padding-top:8px;color:#fff;opacity:.7;margin-left:20px;font-family:Catamaran;font-weight:800}.home-header{margin-top:0;border-bottom:none;font-weight:900;font-size:48px;letter-spacing:-2px}.link{box-shadow:none;text-decoration:none;color:inherit}.switch-container{text-align:right}.switch-container .icon{text-align:center;color:#222;font-size:14px;font-weight:900}.footer{padding-top:52px;text-align:center;font-size:12px}.footer a{text-decoration:none!important}body.light{background-color:#fff;text-shadow:0 0 .1px rgba(0,0,0,.3)}body.light .home-header{color:#333}body.light .bio .author-name-content{background-color:#ecf0f2}body.light .bio .author-introduction{color:#7d7d7d}body.light .bio a{color:navy}body.light .category-container{border-color:#ecf0f2;border-style:solid;border-width:1px 6px;background-color:#f4f7f8}body.light .category-container .item{border:1px solid #ecf0f2;background-color:#fff;box-shadow:0 1px 1px rgba(0,0,0,.1)}body.light .category-container .item a{color:#666}body.light .category-container .item[aria-selected=true]{border:2px solid #909da1;font-weight:bolder}body.light .category-container .item[aria-selected=true] a{color:#636c6e}body.light .thumbnail h3{color:#333}body.light .thumbnail p{color:#7d7d7d}body.light .thumbnail:hover{text-shadow:0 0 6px rgba(0,0,0,.2)}body.light .footer{color:#aaa}body.light .footer a{color:#333}body.light .navigator a{background-color:#fceff7;color:#cc007a}body.dark{background-color:#282c35;text-shadow:0 0 .1px hsla(0,0%,100%,.3)}body.dark,body.dark .home-header{color:#eee}body.dark .bio .author-name-content{background-color:#383636}body.dark .bio .author-introduction{color:#d8d7d7}body.dark .bio a{color:#bb72ec}body.dark .category-container{border-color:#383636;border-style:solid;border-width:1px 6px;background-color:#24272c}body.dark .category-container .item{border:1px solid #383636;background-color:#282c35;box-shadow:0 1px 1px hsla(0,0%,100%,.1)}body.dark .category-container .item a{color:#d8d7d7}body.dark .category-container .item[aria-selected=true]{border:2px solid #666;font-weight:bolder}body.dark .category-container .item[aria-selected=true] a{color:#fff}body.dark .thumbnail h3{color:#eee}body.dark .thumbnail p{color:#d8d7d7}body.dark .thumbnail:hover{text-shadow:0 0 6px hsla(0,0%,100%,.2)}body.dark .footer{color:#d8d7d7}body.dark .footer a{color:#fff}body.dark blockquote{border-left:4px solid hsla(0,0%,100%,.822)}body.dark h1,body.dark h2{border-bottom-color:hsla(0,0%,100%,.3)}body.dark .navigator a{background-color:#fceff7;color:#cc007a}body{font-family:Noto Sans KR,sans-serif;background-color:#fff;-webkit-text-size-adjust:antialiased;-moz-osx-font-smoothing:grayscale;transition:background-color .3s,color .3s}.resp-sharing-button--facebook:hover{background-color:#2d4373}.resp-sharing-button--facebook{background-color:#3b5998;border-color:#3b5998}.resp-sharing-button--facebook:active,.resp-sharing-button--facebook:hover{background-color:#2d4373;border-color:#2d4373}.resp-sharing-button--twitter:hover{background-color:#2795e9}.resp-sharing-button--twitter{background-color:#55acee;border-color:#55acee}.resp-sharing-button--twitter:active,.resp-sharing-button--twitter:hover{background-color:#2795e9;border-color:#2795e9}.social-share{text-align:right;height:100%}.resp-sharing-button__icon,.resp-sharing-button__link{display:inline-block;vertical-align:middle;border:none}.resp-sharing-button__link{text-decoration:none;color:#fff;margin:4px;height:33px}.resp-sharing-button__link .service-label{font-size:12px;padding-right:4px}.resp-sharing-button{height:33px;border-radius:6px;transition:25ms ease-out;padding:3px 8px 3px 10px;font-family:Helvetica Neue,Helvetica,Arial,sans-serif}.resp-sharing-button__icon svg{width:1em;height:1.5em;margin-right:.4em;vertical-align:top}.resp-sharing-button__icon{stroke:#fff;fill:none}.resp-sharing-button__icon--solid{fill:#fff;stroke:none}.sponsor-button{text-align:right;margin:4px}.sponsor-button .bmc-button{display:inline-block;padding:0 7px;width:133px;height:33px;text-decoration:none;background-color:#bb5794;color:#fff;border:1px solid transparent;border-radius:6px;letter-spacing:-.08px;box-sizing:border-box;font-size:12px;line-height:30px;text-align:left}.sponsor-button .bmc-button:active,.sponsor-button .bmc-button:hover{background-color:#a0457d}.sponsor-button .bmc-button img{width:20px;margin-bottom:1px;box-shadow:none;border:none;vertical-align:middle}.sponsor-button .bmc-button span{margin-left:6px}.bio{margin-bottom:24px}.bio .author-description{display:-webkit-flex;display:flex}.bio .author-image{margin-top:12px;margin-right:12px;margin-bottom:0;min-width:72px}.bio .author-name-prefix{font-size:90%;margin-right:4px}.bio .author-name-content{display:inline-block;font-size:95%;padding:2px 6px;font-weight:bolder;border-radius:8px;-webkit-transform-origin:center;transform-origin:center;-webkit-animation:flutter 2s linear infinite;animation:flutter 2s linear infinite}.bio .author-introduction{margin-top:4px;font-size:80%;line-height:1.4}.bio .author-socials{margin-top:4px}.bio a{margin-right:8px;font-size:80%}.bio a.visited{text-decoration:none}@-webkit-keyframes flutter{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}35%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}40%{-webkit-transform:rotate(-5deg);transform:rotate(-5deg)}60%{-webkit-transform:rotate(5deg);transform:rotate(5deg)}65%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(0deg);transform:rotate(0deg)}}@keyframes flutter{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}35%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}40%{-webkit-transform:rotate(-5deg);transform:rotate(-5deg)}60%{-webkit-transform:rotate(5deg);transform:rotate(5deg)}65%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(0deg);transform:rotate(0deg)}}.navigator{margin:40px 0;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap;-webkit-justify-content:space-between;justify-content:space-between;list-style:none;padding:0}.navigator li{margin-bottom:12px}.navigator a{padding:7px 16px 8px;border-radius:6px;font-size:12px;opacity:.8}.gatsby-highlight-code-line{background-color:#022a4b;display:block;margin-right:-1.2em;margin-left:-1.2em;padding-right:1em;padding-left:.75em;border-left:.35em solid #0687f0}blockquote{color:#999}code[class*=language-],pre[class*=language-]{color:#e0e0e0;background:none;font-family:Fira Code,Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.6;font-size:13px;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;-ms-overflow-style:none;overflow:-moz-scrollbars-none}pre[class*=language-]::-webkit-scrollbar{display:none}pre[class*=language-]{padding:1.2em;margin:1.5em 0;overflow:auto;border-radius:.6em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#212121}:not(pre)>code[class*=language-]{padding:.1em .6em;border-radius:.2em;white-space:normal;background:#ece5f1;color:#4b2043}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#616161}.token.punctuation{color:#e0e0e0}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#ff9100}.token.class-name,.token.constant,.token.property,.token.symbol{color:#ff0}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#b388ff}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#00e676}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}.category-container{position:sticky;position:-webkit-sticky;top:0;line-height:0;white-space:nowrap;overflow-x:scroll;-ms-overflow-style:none;overflow:-moz-scrollbars-none;z-index:1;padding:6px 20px}.category-container .item{display:inline-block;margin:.25rem 6px .25rem 0;border-radius:15px;white-space:normal;box-sizing:border-box;cursor:pointer}.category-container .item div{display:block;padding:14px 16px 16px;font-size:13px;box-sizing:border-box}.category-container .item:last-child{margin-right:0}.category-container::-webkit-scrollbar{display:none}.thumbnail-container{min-height:calc(100vh - 3.5rem)}.thumbnail{display:block;margin-bottom:12px;padding:4px 4px 12px;box-shadow:none;transition:text-shadow .3s,opacity .4s;opacity:0}.thumbnail p{font-size:90%;line-height:1.4}.thumbnail.visible{opacity:1}</style><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><title data-react-helmet="true">2020-02-05 TIL | Zero1&#x27;s Note</title><meta data-react-helmet="true" name="description" content="할 일 목록 코틀린 독서 어제 이해 안됬던 코드 부분 그림 그려가면서 이해하기 코드 스피츠 코틀린 강의 정리 코틀린 코드 쳐보기 코틀린 번역 자료 보기 알고리즘 문제 풀기 완료하지 못한 목록 코틀린 코드 쳐보기 코틀린 번역 자료 보기 완료 목록 코틀린 독서 어제 이해 안됬던 코드 부분 그림 그려가면서 이해하기 코드 스피츠 코틀린 강의 정리 알고리즘 문제 풀기 5Fs 1. Fact…"/><meta data-react-helmet="true" property="og:title" content="2020-02-05 TIL"/><meta data-react-helmet="true" property="og:description" content="할 일 목록 코틀린 독서 어제 이해 안됬던 코드 부분 그림 그려가면서 이해하기 코드 스피츠 코틀린 강의 정리 코틀린 코드 쳐보기 코틀린 번역 자료 보기 알고리즘 문제 풀기 완료하지 못한 목록 코틀린 코드 쳐보기 코틀린 번역 자료 보기 완료 목록 코틀린 독서 어제 이해 안됬던 코드 부분 그림 그려가면서 이해하기 코드 스피츠 코틀린 강의 정리 알고리즘 문제 풀기 5Fs 1. Fact…"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="Zero1"/><meta data-react-helmet="true" name="twitter:title" content="2020-02-05 TIL"/><meta data-react-helmet="true" name="twitter:description" content="할 일 목록 코틀린 독서 어제 이해 안됬던 코드 부분 그림 그려가면서 이해하기 코드 스피츠 코틀린 강의 정리 코틀린 코드 쳐보기 코틀린 번역 자료 보기 알고리즘 문제 풀기 완료하지 못한 목록 코틀린 코드 쳐보기 코틀린 번역 자료 보기 완료 목록 코틀린 독서 어제 이해 안됬던 코드 부분 그림 그려가면서 이해하기 코드 스피츠 코틀린 강의 정리 알고리즘 문제 풀기 5Fs 1. Fact…"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link as="script" rel="preload" href="/2-1f8bb2e9086b2d0c088c.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-1a55bdf98ae22e9514e5.js"/><link as="script" rel="preload" href="/12-9f154328fece47bbe0f5.js"/><link as="script" rel="preload" href="/app-c1d808c791d1d4008dc1.js"/><link as="script" rel="preload" href="/1-892fbe677f8ab292f801.js"/><link as="script" rel="preload" href="/styles-7eb353320ebda5af989c.js"/><link as="script" rel="preload" href="/webpack-runtime-981fab9d83abf2eb96ac.js"/><link as="fetch" rel="preload" href="/static/d/900/path---til-2020-02-05-312-0ce-w061Ah9WhMv4fpT8aNhcH44zvM.json" crossOrigin="use-credentials"/></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div class="top"><a class="link" href="/">Zero1&#x27;s Note</a><a href="https://github.com/JaeYeopHan/felog" class="github" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg></a></div><div style="margin-left:auto;margin-right:auto;max-width:39rem;padding:2.4375rem 1.21875rem"><div class="switch-container"><label for="normal-switch"><div style="position:relative;display:inline-block;text-align:left;opacity:1;direction:ltr;border-radius:12px;-webkit-transition:opacity 0.25s;-moz-transition:opacity 0.25s;transition:opacity 0.25s;touch-action:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none"><div class="react-switch-bg" style="height:24px;width:48px;margin:0;position:relative;background:#d9dfe2;border-radius:12px;cursor:pointer;-webkit-transition:background 0.25s;-moz-transition:background 0.25s;transition:background 0.25s"><div style="height:24px;width:26px;position:relative;opacity:0;pointer-events:none;-webkit-transition:opacity 0.25s;-moz-transition:opacity 0.25s;transition:opacity 0.25s"><div class="icon checkedIcon">D</div></div><div style="height:24px;width:26px;position:absolute;opacity:1;right:0;top:0;pointer-events:none;-webkit-transition:opacity 0.25s;-moz-transition:opacity 0.25s;transition:opacity 0.25s"><div class="icon uncheckedIcon">L</div></div></div><div class="react-switch-handle" style="height:22px;width:22px;background:#ffffff;display:inline-block;cursor:pointer;border-radius:50%;position:absolute;transform:translateX(1px);top:1px;outline:0;border:0;-webkit-transition:background-color 0.25s, transform 0.25s, box-shadow 0.15s;-moz-transition:background-color 0.25s, transform 0.25s, box-shadow 0.15s;transition:background-color 0.25s, transform 0.25s, box-shadow 0.15s"></div><input type="checkbox" role="switch" style="border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px" id="normal-switch"/></div></label></div><h1>2020-02-05 TIL</h1><div><h2 id="할-일-목록"><a href="#%ED%95%A0-%EC%9D%BC-%EB%AA%A9%EB%A1%9D" aria-label="할 일 목록 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>할 일 목록</h2>
+<ol>
+<li>
+<p>코틀린 독서</p>
+<ul>
+<li>어제 이해 안됬던 코드 부분 그림 그려가면서 이해하기</li>
+</ul>
+</li>
+<li>코드 스피츠 코틀린 강의 정리</li>
+<li>코틀린 코드 쳐보기</li>
+<li>코틀린 번역 자료 보기</li>
+<li>알고리즘 문제 풀기</li>
+</ol>
+<h2 id="완료하지-못한-목록"><a href="#%EC%99%84%EB%A3%8C%ED%95%98%EC%A7%80-%EB%AA%BB%ED%95%9C-%EB%AA%A9%EB%A1%9D" aria-label="완료하지 못한 목록 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>완료하지 못한 목록</h2>
+<ol>
+<li>코틀린 코드 쳐보기</li>
+<li>코틀린 번역 자료 보기</li>
+</ol>
+<h2 id="완료-목록"><a href="#%EC%99%84%EB%A3%8C-%EB%AA%A9%EB%A1%9D" aria-label="완료 목록 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>완료 목록</h2>
+<ol>
+<li>
+<p>코틀린 독서</p>
+<ul>
+<li>어제 이해 안됬던 코드 부분 그림 그려가면서 이해하기</li>
+</ul>
+</li>
+<li>코드 스피츠 코틀린 강의 정리</li>
+<li>알고리즘 문제 풀기</li>
+</ol>
+<h2 id="5fs"><a href="#5fs" aria-label="5fs permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5Fs</h2>
+<h3 id="1-fact"><a href="#1-fact" aria-label="1 fact permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Fact</h3>
+<h4 id="1-네트워크"><a href="#1-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC" aria-label="1 네트워크 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. 네트워크</h4>
+<ol>
+<li>
+<p>인터넷의 기기와 구성</p>
+<ul>
+<li>이더넷은 전 세계에서 폭넓게 이용되고있는 네트워크 규격이다.</li>
+<li>현대 컴퓨터에 탑재되어 있는 유선 네트워크 인터페이스는 거의 100%가 이더넷이다.</li>
+<li>허브/스위치를 몇 단계 접속하는 것을 cascade접속이라고 한다.</li>
+<li>이더넷은 접속을 작게 분할해서 프레임이라고 부르는 형태로 만들고 이걸 전기신호나 광신호로 변환해서 통신 매체에 전송한다.</li>
+</ul>
+</li>
+<li>
+<p>L2 스위치</p>
+<ul>
+<li>일반적으로 허브, 스위치, L2스위치는 거의 동일한 의미로 사용된다.</li>
+<li>L2스위치는 받아들인 이더넷 프레임의 수신처 MAC주소를 알아내 그 MAC주소를 가진 컴퓨터가 접속되어 있는 포트로 이더넷 프레임을 송출한다.</li>
+<li>위와 같이 할 수 있는 이유는 포트와 MAC주소의 대응 여부를 MAC주소 테이블에 기록하고 있기 때문이다.</li>
+<li>등록되지 않은 컴퓨터 앞으로 이더넷 프레임을 보내는 경우 L2 스위치는 프레임이 도달한 포트 이외의 포트 전체에 그 프레임을 송출한다. 이 동작을 플러딩(flooding)이라고 한다.</li>
+<li>플러딩을 한 후 이걸 수신한 컴퓨터가 어떤 형태의 송신을 하기 위해 이더넷 프레임을 L2스위치로 송출하면 여기에 포함된 송신처 MAC주소와 포트 번호가 MAC 주소 테이블에 등록된다.</li>
+<li>L3 스위치는 그 이름대로 레이어3, 즉 IP 패킷을 처리하는 스위치다. 라우터와 L3 스위치는 기본적으로 동일한 기능을 갖는다고 봐도 무방하다.</li>
+<li>L4 스위치는 즉 TCP 나 UDP에서 패킷을 할당하는 기능을 가지며 부하 분산 등의 목적을 갖는다.</li>
+<li>L3 스위치는 LAN 를 많이 갖고 있어 단말기가 많이 설치된 네트워크의 말단에 가까운 영역에서도 이용하기 쉽다는 특징을 갖지만 L3 스위치에 문제가 생기면 라우터 기능과 스위치 기능 양쪽 다 못쓰게 된다.</li>
+</ul>
+</li>
+<li>
+<p>무선 LAN</p>
+<ul>
+<li>무선 LAN은 LAN 케이블 대신 무선을 사용해서 네트워크에 접속하는 기술이다.</li>
+<li>무선 LAN은 유선 LAN보다 보안이 약하다.</li>
+<li>본래 무선 LAN 그 자체는 유선 접속을 무선으로 치환해서 허브/스위치에서의 접속과 동일한 기능(브릿지)을 제공하는 것이다.</li>
+</ul>
+</li>
+<li>
+<p>포트 기반 VLAN과 태그 기반 VLAN</p>
+<ul>
+<li>물리적으로는 한 개의 네트워크를 논리적으로 여러 개의 네트워크로 분할하는 기술을 VLAN(virtual LAN)이라고 한다.</li>
+<li>포트 기반 LAN은 스위치나 라우터에 탑재되어 있는 포트를 그룹 몇개로 지정해서 그 그룹에 속한 포트군을 독립시켜 하나의 LAN처럼 보이게 하는 기술이다.</li>
+<li>태그 기반 VLAN은 LAN 케이블 한개 내에 여러개의 LAN 정보를 흘려 보내는 기술이다. 이더넷 프레임 내에 VLAN 를 나타내는 정보(태그)를 내장함으로써 LAN 케이블 한개에 흘리는 정보를 VLAN으로 구분한다.</li>
+</ul>
+</li>
+<li>
+<p>VPN이란</p>
+<ul>
+<li>VPN(virtual Private Network)은 인터넷 등 기존 네트워크 내에 새로운 가상 네트워크를 만드는 기술이다.</li>
+<li>VPN을 이용하는 경우 만의 하나 도청 등을 당하는 상황에서도 일정 수준의 기밀을 보장하도록 암호화를 병용한다.</li>
+<li>터널 기술은 어떤 통신회선 내에 만들어낸 가상 통신 회선이다. 터널을 여러 개 만들면 통신 회선 한 개를 여러 개의 가상화 통신 회선으로 이용할 수 있게 된다.</li>
+</ul>
+</li>
+<li>
+<p>가상화</p>
+<ul>
+<li>가상화란 물리적인 네트워크나 컴퓨터를 사용해서 논리적인 네트워크나 컴퓨터를 만들어 내는 기술이다.</li>
+<li>가상화로 물리적인 장비 한 대 내에 여러 대의 논리적인 장비를 만들어내거나 반대로 여러 대의 물리적인 장비를 한대의 논리적인 장비로 보이게 할 수 있다.</li>
+<li>가상화의 장점으로 물리적인 장비의 대수나 장소에 제약을 받지 않고 기능을 이용할 수 있다는점. 장비의 처리 능력을 효과적으로 사용할 수 있다는점. 장비 각각이 갖는 것 이상의 능력을 낼 수 있다는점 . 필요에 따라 규모 확장/축소가 쉽다는 점이 있다.</li>
+</ul>
+</li>
+<li>
+<p>클라우드</p>
+<ul>
+<li>클라우드의 특징은 이용자가 직접 web 화면 등을 통해 컴퓨터, 네트워크, 각종 서비스를 자유롭게 조합해서 필요한 시스템이나 서비스를 구성한 후 이걸 네트워크를 경유하여 이용할 수 있다는 점이다. 이 배경에는 가상화 기술이 중요한 역할을 한다.</li>
+<li>Iaas(Infrastructure as a Service)</li>
+<li>Paas(PlatForm as a Service)</li>
+<li>SaaS(Software as a Service)</li>
+</ul>
+</li>
+<li>
+<p>웹을 지탱하는 기술</p>
+<ul>
+<li>하이퍼텍스트에는 문서 내에 하이퍼링크라고 불리는 다른 문서에 대한 참조가 있고 하이퍼링크를 따라가면 어러 개의 문서를 연관 지어서 전체적으로 거대한 정보를 나타낼 수 있다.</li>
+<li>URL : Web에 존재하는 문서나 각종 파일의 위치를 표시하는데 사용됨</li>
+<li>URL은 크게 나눠 scheme, host, path 세부분으로 나뉜다.</li>
+<li>
+<p>정적 컨텐츠는 미리 제작해서 서버에 보존되어 있는 컨텐츠이다.</p>
+<ul>
+<li>항상 동일하도록 유지되면 좋은것에 사용된다.</li>
+</ul>
+</li>
+<li>
+<p>동적 컨텐츠는 읽기 요청할 때마다 프로그램이 동작해서 만들어내는 커텐츠이다.</p>
+<ul>
+<li>접속할 때마다 결과가 바뀔 가능성이 있는 것에 사용한다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>HTTP</p>
+<ul>
+<li>HTTP(HypertextTransfer Protocol)는 web서버와 web클라이언트 간에 web 정보를 주고받기 위한 프로토콜이다.</li>
+<li>
+<p>이전에 무엇을 요청했는가에 따라 응답이 변하는 일이 없이 동일한 조건이라면 요청에 대해서든 응답이 상항 동일하다고 나오는데 사실 method에 따라 다르다. post는 다를 수 있음.</p>
+<ul>
+<li>서버의 정보가 안전한 것은 head와 get이다.</li>
+<li>멱등성을 가지는 메서드는 get delete put head 등이 있다.</li>
+</ul>
+</li>
+<li>HTTP 요청을 TCP/IP로 서버에 보내면 서버는 이걸 받아서 요청 내용을 처리하고 그 결과를 HTTP dmdekqdmfh qhsosek.</li>
+<li>요청에는 요청 대상, 헤더필드, 메시지 본체의 각 부분이 있으며 하고자 하는 조작 요청을 대상 메서드로 지정한다.</li>
+<li>응답에는 상태값, 헤더 필드, 메시지 본체의 각 부분이 있으며 처리 결과는 상태코드로 표시된다.</li>
+</ul>
+</li>
+<li>
+<p>HTTPS와 SSL/TLS</p>
+<ul>
+<li>HTTPS는 HTTP통신에서의 통신을 안전하게 보호하기 위한 구조다.</li>
+<li>포트번호 443이 할당되어져 있다.</li>
+<li>HTTPS는 SSL(Secure Sockets Layer)/TLS(Transport Layer Security)라고 불리는 프로토콜이 만들어내는 안전한 연결 방법을 사용하고 이를 기반으로 HTTP에 따른 통신을 한다.</li>
+<li>HTTP의 요청이나 응답 내용은 암호화 되고 도중에 누가 통신내용을 변경했는지 검사할 수 있고 접속한 WEB서버가 진짜인지 검증할 수 있다.</li>
+</ul>
+</li>
+<li>
+<p>이외의 어플리케이션 계층 프로토콜</p>
+<ul>
+<li>STMP : 전자 메일 전송에 사용되는 프로토콜이다.</li>
+<li>
+<p>POP3와 IMAP4는 메일함을 읽는 프로토콜이다.</p>
+<ul>
+<li>POP3는 메일 함의 메일을 PC에 넣고 PC내에서 정리나 열람을 하는 형태</li>
+<li>IMAP4는 메일을 서버상의 메일함에 둔 상태에서 정리나 열람을 하는 형태</li>
+</ul>
+</li>
+<li>
+<p>FTP 파일을 전송하기 위한 프로토콜</p>
+<ul>
+<li>전송 제어를 위해 21, 20 포트를 사용</li>
+<li>한개는 실제 데이터를 전송하는 것 나머지 하나는 제어하기 위한 접속은 독립되어 있으므로 전송 도중 중지시키는 등의 컨트롤을 하기 쉬워짐</li>
+</ul>
+</li>
+<li>
+<p>액티브 모드와 패시브 모드</p>
+<ul>
+<li>액티브 모드는 아무것도 지정하지 않고 FTP 프로토콜에서는 FTP 서버가 클라이언트에게 연결 하려고 하는데 가정이나 사무실 네트워크는 외부에서 부정 침입을 막기 위해 외부에서 내부로의 접속을 금지한다.</li>
+<li>액티브 모드의 문제점을 해결하기 위해 FTP 클라이언트 측에서 두번 째 접속(전송데이터용)을 연결하는 패시브 모드가 설정된다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>SSH(secure shell)</p>
+<ul>
+<li>서버나 네트워크 기기에 접속해서 대상을 CUI로 조작하는 데 사용하는 프로토콜 및 그걸 하기 위한 프로그램의 명칭이다.</li>
+<li>암호화 되어 있어서 안전하게 대상을 조작할 수 있다.</li>
+</ul>
+</li>
+<li>
+<p>DNS</p>
+<ul>
+<li>IP 주소 대신 컴퓨터에 부여된 명칭인 도메인명을 쓴다.</li>
+<li>도메인명에서 IP주소를 찾는 것(정방향), 혹은 반대로 IP주소에서 도메인 명을 찾는것(역방향)을 이름 분석(name resolution)이라 한다.</li>
+<li>DNS를 구성하는 서버에는 컨텐츠서버, 캐시서버 두 종류가 있다.</li>
+</ul>
+</li>
+<li>
+<p>NTP</p>
+<ul>
+<li>네트워크에 연결된 컴퓨터의 시간을 맞추기 위한 프로토콜</li>
+<li>NTP로 시간 정보를 제공하는것은 NTP 서버다.</li>
+<li>NTP 서버는 계층적인 구조를 취한다.</li>
+</ul>
+</li>
+<li>
+<p>HTTP 프락시</p>
+<ul>
+<li>웹 서버와 직접 통신하지 않고 어떤 형태의 중계용 컴퓨터를 거쳐 인터넷과 주고 받는 형태.</li>
+<li>위와 같이 사이에 두고 통신 내용을 전하는 컴퓨터를 프락시라고 한다.</li>
+<li>프락시가 제공하는 기능으로 컨텐츠의 케시와 바이러스 검출 유해사이트 차단이 있다.</li>
+<li></li>
+</ul>
+<h4 id="2-코틀린-코드스피츠"><a href="#2-%EC%BD%94%ED%8B%80%EB%A6%B0-%EC%BD%94%EB%93%9C%EC%8A%A4%ED%94%BC%EC%B8%A0" aria-label="2 코틀린 코드스피츠 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. 코틀린 코드스피츠</h4>
+</li>
+</ol>
+<h5 id="continuation--cps"><a href="#continuation--cps" aria-label="continuation  cps permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>continuation &#x26; CPS</h5>
+<ol>
+<li>
+<p>continuation : 우리가 알고 있는 콜백과 부합</p>
+</li>
+<li>
+<p>CPS : continuation을 실질적으로 응용하는 방식, 콜백을 패스하는 개념</p>
+</li>
+<li>
+<p>Continuation &#x26; Sequence</p>
+<ol>
+<li>밑의 코드 또한 continuation을 사용한다. c에는 cont가 없으면 a로 초기화 하고, 있으면 있던것을 쓴다.</li>
+<li>continuation func은 return 값으로 continuation을 반환</li>
+<li>while문의 조건 안에서는 반복적인 일 (밑의 코드의 주석으로 실행으로 표시한 부분) 이 이터레이션이다.</li>
+<li>이터레이션으로 보면 while의 조건이 hasNext continuation(3,cont)가 next 부분임. 그러므로 이런 continuation의 행동은 이터레이션에 수련하게됨.</li>
+<li>continuation을 쓰고 있는 코드의 분할을 자동으로 만들어 주는 것이 코틀린에서 고유명사 sequence이다. continuation 구문을 자동으로 만들어주는 이터레이션 생성기이다.</li>
+</ol>
+</li>
+</ol>
+<div class="gatsby-highlight" data-language="kotlin"><pre class="language-kotlin"><code class="language-kotlin"><span class="token keyword">class</span> Cont<span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> state <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">var</span> isCompleted <span class="token operator">=</span> <span class="token boolean">false</span>
+    <span class="token keyword">var</span> result<span class="token operator">:</span>T<span class="token operator">?</span> <span class="token operator">=</span> <span class="token keyword">null</span>
+    <span class="token keyword">fun</span> <span class="token function">resume</span><span class="token punctuation">(</span>v<span class="token operator">:</span>T<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        state<span class="token operator">++</span>
+        result <span class="token operator">=</span> v
+    <span class="token punctuation">}</span>
+    <span class="token keyword">fun</span> <span class="token function">complete</span><span class="token punctuation">(</span>v<span class="token operator">:</span>T<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        isCompleted <span class="token operator">=</span> <span class="token boolean">true</span>
+        result <span class="token operator">=</span> v
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token comment">//실행</span>
+<span class="token keyword">var</span> cont <span class="token operator">=</span> <span class="token function">continuation</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span><span class="token operator">!</span>cont<span class="token punctuation">.</span>isCompleted<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    cont <span class="token operator">=</span> <span class="token function">continuation</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> cont<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token function">println</span><span class="token punctuation">(</span>cont<span class="token punctuation">.</span>result<span class="token punctuation">)</span>
+
+
+    <span class="token keyword">fun</span> <span class="token function">continuation1</span><span class="token punctuation">(</span>a<span class="token operator">:</span>Int<span class="token punctuation">,</span> cont<span class="token operator">:</span>Cont<span class="token operator">&lt;</span>Int<span class="token operator">></span><span class="token operator">?</span> <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token operator">=</span> run <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> v<span class="token operator">:</span>Int
+        <span class="token keyword">val</span> c <span class="token operator">=</span> <span class="token keyword">if</span><span class="token punctuation">(</span>cont <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            v <span class="token operator">=</span> a
+            <span class="token function">Cont</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            v <span class="token operator">=</span> cont<span class="token punctuation">.</span>result<span class="token operator">!!</span>
+            cont
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//본문</span>
+<span class="token keyword">when</span><span class="token punctuation">(</span>c<span class="token punctuation">.</span>state<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token number">0</span><span class="token operator">-></span><span class="token punctuation">{</span>
+        v<span class="token operator">++</span>
+        <span class="token function">println</span><span class="token punctuation">(</span>"state $v<span class="token punctuation">)</span>
+        c<span class="token punctuation">.</span><span class="token function">resume</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token number">1</span><span class="token operator">-></span><span class="token punctuation">{</span>
+        v<span class="token operator">++</span>
+        <span class="token function">println</span><span class="token punctuation">(</span>"state $v<span class="token punctuation">)</span>
+        c<span class="token punctuation">.</span><span class="token function">resume</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span><span class="token operator">-></span><span class="token punctuation">{</span>
+        v<span class="token operator">++</span>
+        <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"state <span class="token interpolation variable">$v</span>"</span><span class="token punctuation">)</span>
+        c<span class="token punctuation">.</span><span class="token function">complete</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>
+<p>이렇게 하면 만들 수 있음.</p>
+<ol>
+<li>continuation은 코드에 없으나 지가 알아서 만들것임</li>
+<li>yield() 를 쓸 때마다 iteration이 나눠지는것임</li>
+<li>왜 이렇게 짰는데 continuation이 생겨나는지는 컴파일러가 기능을 수행하기 때문이다.</li>
+<li>우리는 sync block 형태로 짜길 원한다 이게 이해하기 쉽다.</li>
+<li>
+<p>sequence란 block이 나오면 밑과 같이 짜면 컴파일러는 위의 코드처럼 만들어준다. 밑은 컴파일러가 하는것이다.</p>
+<ul>
+<li>continuation 객체를 만들고</li>
+<li>continuation 객체를 호출하는 형태로 변경</li>
+<li>안의 코드도 yield를 기준으로 각각의 케이스를 다른 스테이트로 나눠서 코드를 위의 when과 같이 바꿔줌</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="kotlin"><pre class="language-kotlin"><code class="language-kotlin"><span class="token keyword">val</span> s <span class="token operator">=</span> sequence <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> v <span class="token operator">=</span> <span class="token number">3</span>
+    v<span class="token operator">++</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>'state $v"<span class="token punctuation">)</span>
+    <span class="token function">yield</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span>
+    v<span class="token operator">++</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>'state $v"<span class="token punctuation">)</span>
+    <span class="token function">yield</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span>
+    v<span class="token operator">++</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>'state $v"<span class="token punctuation">)</span>
+    <span class="token function">yield</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span>
+    v<span class="token operator">++</span>
+<span class="token punctuation">}</span>
+<span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">last</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre></div>
+<ul>
+<li>컴파일러는 sequence란 함수에 무슨 비밀이 있어서 이렇게 나눌 수 있는게 아니라 실제 sequence라는 애는 sequence context를 가지며  sequence context에 있는 메소드 yield를 호출 한것</li>
+<li>sequence는 수신함수(확장함수)이기 때문에 context로 sequence context를 받아 들임.</li>
+<li>sequence context 안의 메소드중 yield가 있기 때문에 sequence에서 사용할 수 있는것이다. 사실 this.yield임(왜 this를 생랴이 가능할까 ?)</li>
+<li>밑의 코드중 가장 중요한 부분은 suspendCoroutineUninterceptedOrReturn { c-> 부분이다.</li>
+<li>위의 c가 continuation이다.</li>
+<li>여기서 나오는 suspend는 위의 코드에서 when에 나오는 하나의 섹션을 의미한다. 한번에 이 코드를 실행하지 않고 분할해서 나눠줘야하는 지점을 suspend라고 부름</li>
+<li>위의 함수는 yield() 전까지 리턴이 된 상태임. 일반 적인 함수는 처음부터 시작해서 끝에서 끝나는데 코루틴이라는 형태의 함수들은 중간부터 중간을 리턴할 뿐만 아니라 중간부터 시작해서 중간을 리턴할수 있음 위의 코드와 같이 바뀌니까</li>
+<li>각 섹션의 yield()가 일어나기 전까지의 것 하나하나를 suspend라고 한다 함수가 끝까지 실행되지 않고 멈춘다는 것임 중간 리턴 때 멈춤</li>
+<li>그다음 suspend 된걸 resume 한다</li>
+<li>밑의 코드는 nextStep을 현재의 continuation으로 리턴한 것 처럼 nextStep은 여기서 안보이지만 sequence context의 속성인데 얘를 다음번 continuation으로 잡아주고 리턴 값을 suspend상태로 보내주는 것이다. yield하면 suspend이니까</li>
+<li>실제로 컴파일 타임에 이 코드를 나누게 되는 비밀은 suspendCoroutineUninterceptedOrReturn { c- >} 이다</li>
+<li>위의 것이 컴파일러가 직접 코드를 나누게 명령내리는 컴파일러 전용 명령이다.</li>
+<li>위의 것이 각각 continuation state로 나뉘어 지는 것이다.state 1,2,3로나뉘어 지는 이유가 suspendCoroutineUninterceptedOrReturn얘임</li>
+<li>위의 것은 suspendCoroutine 로 부터 파생 되는데 내용을 보면 구현이 internal로 되있음 언어에 맞춰 시스템이 구현 한것이고 개발자가 할게 아님 컴파일러가 처리할 것임. suspendCoroutineUninterceptedOrReturn 지점을 기준으로 분해시키는것 suspend 지점이라고 suspend pointer를 컴파일러에게 시켜서 분해를 시키는것 그때마다 continuation이 생겨나는 것임 왜 continuation을 인자로 받는지는 시스템이 날라주고 시스템이 continuatino을 만들기 때문.</li>
+<li>아까 위의 코드에선 우리가 만들었음. 이건 컴파일러가 continuation을 만드니까 컴파일러에게 받는것임.</li>
+<li>sequence는 실행은 하지 않는다. 직접 하나하나 실행 해줘야한다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="kotlin"><pre class="language-kotlin"><code class="language-kotlin"><span class="token keyword">override</span> <span class="token keyword">suspend</span> <span class="token keyword">fun</span> <span class="token function">yield</span><span class="token punctuation">(</span>value<span class="token operator">:</span> T<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    nextValue <span class="token operator">=</span> value
+    state <span class="token operator">=</span> State_Ready
+    <span class="token keyword">return</span> suspendCoroutineUninterceptedOrReturn <span class="token punctuation">{</span> c <span class="token operator">-></span>
+    nextStep <span class="token operator">=</span> c
+    CORUTINE_SUSPENDED<span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>CO : 일반적으로 코루틴 시스템이 적용되는 많은곳에서 수동으로 실행함수를 만들때 쓰는 기법</li>
+<li>자바스크립트의 generator는 sequence와 똑같은 기능을 함. yield를 호출할 때마다 suspend 구간이 생기고 거기에 continuation을 만들지만 continuation의 제어권을 직접 주진 않음.</li>
+<li>하지만 코루틴시스템에선 continuation 제어권을 인터페ㅎ이스가 준다.</li>
+<li>제너레이터에서는 yield를 원하는 타이밍에 할 수 없음. 왜냐면 동기 로직 안에서 yield넣을수 있을 뿐 이 안에서 ajax callback에 yield를 하는건 불가능. 동기화 로직 yield밖에 안된다. 왜냐면 우리가 yield 할 때 continuation을 제어권 없이 yield 하는 타이밍에 continuation이 resume이 되기 때문이다.</li>
+<li>es8에서는 sync/await과 제너레이터를 결합해서 yield 타이밍을 미룰 수 있는 async generator가 있음 걔를 이용하면 sequence와 동등한 스펙을 구현할 수 있음.</li>
+<li>제너레이터 안에서는 조종할 수 없지만 밖에서 제너레이터를 이터레이션을 돌리는 코드를 원하는 타이밍에 이터레이션 될 수 있도록 하는것이 코루틴의 CO의 원리이다.</li>
+<li>제너레이터 또는 코루틴의 구현체가 단방향인 경우 코루틴 안에서 밖으로  이터레이션 값을 줄 수 있지만, 밖에서 코루틴 안으로 이터레이션 값을 줄수는 없다.</li>
+<li>es6  제너레이터는 yield도 받고 next에 괄호 열고 값을 넣어줄 수도 있음. 그러면 코루틴에서는 못쓰는  a = yield(30) 이런 값을 받을 수 있음. 양방향 통신을 함. 밖에서 제너레이터 안으로 yield로 인자를 여러번 보낼 수 있음.</li>
+<li>yield 상태에선 통신이 안되기 때문에 최초 함수의 인자는 받을 수 있지만 코루틴 이터레이션에서는 중간에 인자를 받을 수 없다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="kotlin"><pre class="language-kotlin"><code class="language-kotlin"><span class="token keyword">class</span> State<span class="token punctuation">{</span>
+    <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token string">""</span>
+    <span class="token keyword">lateinit</span> <span class="token keyword">var</span> target<span class="token operator">:</span>Promise<span class="token operator">&lt;</span>Response<span class="token operator">></span> <span class="token comment">// 현재는 null</span>
+<span class="token punctuation">}</span>
+sequence<span class="token punctuation">{</span>
+    <span class="token keyword">val</span> s <span class="token operator">=</span> <span class="token function">State</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//최초의 스테이트 탄생 시킴</span>
+    s<span class="token punctuation">.</span>target <span class="token operator">=</span> window<span class="token punctuation">.</span><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token function">Request</span><span class="token punctuation">(</span><span class="token string">"a.txt"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>   <span class="token comment">//window.fetch는 promise&lt;Response>를 리턴하는 promise</span>
+    <span class="token function">yield</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>    <span class="token comment">//yield로 state 객체 자체를 보냈음.</span>
+    s<span class="token punctuation">.</span>target <span class="token operator">=</span> window<span class="token punctuation">.</span><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token function">Request</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span>result<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">//얘는 외부의 인자를 받아왔을 것임. 이것을 통해 외부와 대화를 할 수 있게 됬음. s객체의 result만 갱신하는 걸로 코루틴 안에서 밖깥쪽의 값을 얻어올 수 있음.</span>
+    <span class="token function">yield</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span>result<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">fun</span> <span class="token function">co</span><span class="token punctuation">(</span>it<span class="token operator">:</span>Iterrator<span class="token operator">&lt;</span>State<span class="token operator">></span><span class="token operator">?</span> <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">,</span> seq<span class="token operator">:</span> SequenceScope<span class="token operator">&lt;</span>State<span class="token operator">></span><span class="token operator">?</span> <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">val</span> iter <span class="token operator">=</span> it <span class="token operator">?</span> <span class="token operator">:</span>seq<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">iterator</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">?:</span> <span class="token keyword">throw</span> <span class="token function">Throwable</span><span class="token punctuation">(</span>"invalid<span class="token punctuation">)</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>iter<span class="token punctuation">.</span><span class="token function">hasNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span> iter<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">let</span> <span class="token punctuation">{</span>st <span class="token operator">-></span>
+       st<span class="token punctuation">.</span>target<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">{</span>it<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">{</span>
+           st<span class="token punctuation">.</span>result <span class="token operator">=</span> it
+           <span class="token function">co</span><span class="token punctuation">(</span>iter<span class="token punctuation">)</span>
+       <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//첫번쨰 인자는 없으면 알아서 null 처리 함</span>
+<span class="token function">co</span><span class="token punctuation">(</span>sequence<span class="token punctuation">{</span>
+    <span class="token keyword">val</span> s <span class="token operator">=</span> <span class="token function">State</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    s<span class="token punctuation">.</span>target <span class="token operator">=</span> window<span class="token punctuation">.</span><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token function">Request</span><span class="token punctuation">(</span>"a<span class="token punctuation">.</span>txt<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token function">yield</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+    s<span class="token punctuation">.</span>target <span class="token operator">=</span> window<span class="token punctuation">.</span><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token function">Request</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span>result<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token function">yield</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span>result<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
+<ul>
+<li>위의 코드에서 중간에 대화를 할 수 있게끔 하기 위해 기본적인 target을 Promise&#x3C;Response>로 지정</li>
+<li>양방향 통신이 안되는 코루틴 같은 시스템에서는 직접 양방향 통신을 위한 메모리 공간을 갖고 있는객체를 외부에 출력해 줘야지만 그 객체의 속성을 안에서 이용할 수 있음.</li>
+<li>그래서 yield로 부터 리턴값을 받아온건 아니지만 s의 속성으로 받아올 수 있음.</li>
+<li>하지만 위까지는 안쪽 사정이고 우리는 시퀀스를 이용하는 CO 함수를 만들고 싶은것이다.</li>
+<li>막 점프하고 하는게 너무 복잡하고 그러니 간단하게 sync block방식으로 사용하게 끔 co가 나온것</li>
+<li>co 코드의 SequenceScope&#x3C;State> 가 sequence함수의 리턴값 왜 State냐면 yield 할떄 입력값이 State() 이기 때문.</li>
+<li>co 코드의 iterator는 contination의 passing에 의해 iterator가 직접 있는 경우와 없으면 seq?.iterator()로 받아오고 있음. 근데 둘다 안줬으면 Throw를 날림</li>
+<li>seq는 iteration을 return 함</li>
+<li>iter.next()는 State 객체가 나옴 . 위의 seq 스테이트 객체를 반환하는 iteration을 갖고 있는 seq 이기 때문이다.</li>
+<li>State는 Promise&#x3C;Response>임.</li>
+</ul>
+<h5 id="suspend--coroutine"><a href="#suspend--coroutine" aria-label="suspend  coroutine permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>suspend &#x26; coroutine</h5>
+<ul>
+<li>cps와 suspend 와 코루틴을 이용하여 섹션을 만들어 내서 continuation을 자동으로 만들어줄 수 있다라는 기본 개념을 알게 되었고,</li>
+<li>이전까지완 지금부터는 다른데 위에서 배운 기저 시스템을 이용해서 async generator처럼 비동기로 실행되지만 section 구분을 자동으로 컴파일러에게 의뢰해서 구문들을 만들어내는 일종의 닉네임들과 여러가지 니모닉으로 이루어져 있는 시스템을 제안함</li>
+<li>결국 여기나오는 것들은 sequence와 continuos resume으로 다 번역이 됨 하지만 이것 깊숙히 감쳐줘 있고 이걸 추상화 하여 추상화한 객체끼리 통신들을 그 위에층에 만든것임 결국 위에층이 밑에 층에 깔린걸로 바뀜</li>
+<li>위에서는 아얘 다른 언어로 만들어 놨음.(DSL)이걸 이해하기 위해선 윗쪽의 것들을 다 이해 해야한다.</li>
+<li>코틀린 코틀린 생태계에서 나오는 coroutines는 위에서 나왔던 coroutine과는 다른 애다 고유 명사임</li>
+<li>서브루틴이란 반복된 로직이 있는 경우 함수안에 가둬놓고 재활용해서 호출함으로 써 재활용 하는것</li>
+<li>서브루틴 특징으로 인자와 리턴값이 있어서 서브루틴 내부가 위에서 아래로 한번 실행되는게 특징 이었음.</li>
+<li>코루틴은 함수의 진입접과 리턴은 있을지 몰라도 중간에 계속해서 빠져나오고 진입할 수 있는 yield라는 공간들이 있어서 함수의 처음 호출 이외에도 여러번 진입 나오기 진입 나오기를 반복할 수 있는 스타일을 코루틴이라고 부름. co(복수) routine</li>
+</ul>
+<h6 id="kotlin-coroutines"><a href="#kotlin-coroutines" aria-label="kotlin coroutines permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>kotlin coroutines</h6>
+<ul>
+<li>
+<p>가장 핵심 적인 내용은 coroutineContext get(key):Element : 엘리먼트 라는 애의 컨테이너다 라고 생각하면 된다.</p>
+</li>
+<li>
+<p>코루틴 컨텍스트가 하나 있으면 여기에 element를 잔뜩 집어넣을 수 있음. map 이랑 set 같은 놈임</p>
+</li>
+<li>
+<p>그래서 coroutineContext element를 의존한다. 보유도 하고 있다. corutineContext -> element</p>
+</li>
+<li>
+<p>그래서 coroutineConext == element 라고 해도 됨 </p>
+</li>
+<li>
+<p>하지만 그 coroutineContext가 element의 구상체임에 불구하고 다른점은 element의 컨테이너 이기도 하다</p>
+</li>
+<li>
+<p>element를 job과 dispatcher가 상속을 함.</p>
+</li>
+<li>
+<p>dispatch : 아까 우리가 만든 sequence가 아니라 코어 함수에 해당하는 실행기. 얘각 바로 실행해주는애. 우리가 만든애는 실행기가 아니라 sequence를 실행해줄 코어 함수가 필요 했음 .</p>
+</li>
+<li>
+<p>코루틴 컨텍스트는 실행기인 dispatcher도 소유하고 아까 sequence까 만들어준 iteration 객체 하나하나가 job이다</p>
+</li>
+<li>
+<p>코루틴 컨텍스트는 시퀀스 마냥 여러개의 이터레이션 객체들을 소유하고 그것을 실행하는 코어함수인 dispatcher를 소유하는 객체임.</p>
+</li>
+<li>
+<p>대부분의 코루틴컨텍스트는 하나의 dispatcher와 다수의 job으로 이루어져있음.</p>
+</li>
+<li>
+<p>서스펜드 코루틴 섹션을 만들어주는 시스템과 코어라는 이터레이션 실행기를 객체로 역활모델로 추상화 한게 코루틴 컨텍스트가 걔내들을 다 소유하는 컨테이너가 되고 이안에 실행기의 디스패처와 각각 이터레이션 나타내게 되는 잡들을 집어 넣게 되는것임.</p>
+</li>
+<li>
+<p>job은 하나의 이터레이션을 추상화했기 때문에 대략 얼추 비슷한 기능을 갖고 있는 메소드가 제공된다 아까는 switch로 나눈 구문이 무조건 실행됬는데 이 안의 메소드 호출에 따라서 실행할지 말지 대기할지 추상화를 해놓은것임 이 일이 끝난 후에 continuation의 resume을 부르는 것은 당연한대 resume 부르는 행위를 언제할지를 추상화 시켜놔서 우리에게 추상화된 개념으로 제공해줌 하나의 이터레이션에 해당하는 녀석임</p>
+</li>
+<li>
+<p>하지만 sync 로직만 커버함</p>
+</li>
+</ul>
+<p>//여기에 이미지 넣어야함</p>
+<ul>
+<li>
+<p>처음 만든 sequence는 syn 로직이었는데 두번째로 한 promise는 밖에 있는 co 실행기가 then을 통해 resume을 시켰기 때문에 비동기 적으로 구현됬음. 하지만 자바는 promise와 비슷한 completedFuture라는 추상객체가 있음.</p>
+</li>
+<li>
+<p>job을 상속해서 deferred라는 애를 만듬 얘는 then과 마찬가지로 await하는 시점에 모든 비동기가 해결 됬을때 resume을 호출해 주는 job으로 부터 상속받은 비동기를 처리하기 위한 것 promise와 비슷함</p>
+</li>
+<li>
+<p>yield를 상수값으로 할 경우 동기적으로 내보내면 되지만 promise같은 애가 개입하면 아까 co에서 promise.then을 처리한 다음에야 우리가 co를 다시 호출할 수 있었음.</p>
+</li>
+<li>
+<p>마찬가지로 힌트를 줘야함. 이 이터레이션이 동기적인 명령인지 아니면 비동기의 완료시점에 resume을 해줘야하는지 알아야함 내부적으로 이것을 추상화하고 있는 객체가 deffered</p>
+</li>
+<li>
+<p>동기적인 iteration은 다 job에 때려박고, 비동기 적인iteration은 다 deferred에 때려박음</p>
+</li>
+<li>
+<p>deferred에 때려박으면 await 시점에 resume이 일어나고 job은 바로 start가 일어나서 join될때까지 바로 실행 되는것임</p>
+</li>
+<li>
+<p>job과 deffered는 coroutine builder라는 애로 만든다.</p>
+</li>
+<li>
+<p>launch를 이용하면 job을 만들 수 있고, async를 이용하면 deffered를 만들 수 있음.</p>
+</li>
+<li>
+<p>둘중 하나를 만들어 coroutineContext에 빡빡 밟아주고 ..?? 실행하면 얘가 디스패처로 통해 자기가 쌓아놓은 job과 deferred를 co처럼 돌아가면서 이터레이션 실행한다.</p>
+</li>
+<li>
+<p>그럼 job과 deffered로 만든 이 생태계를 아까처럼 switch 문으로 나눠주는 컴파일 과정이 있어야되는데 여기서 job과 deffered를 실행기인 dispatcher로 실행할 거지만 니가 내가만든 동기 코드를 job이나 deffered에 이 시점을 바탕으로 스위치 문을 다 state문으로 나눠 continuation 객체까지 다 연결해 줘야되 라는 지시를 컴파일러에게 해줘야하는데 .</p>
+</li>
+<li>
+<p>이 동네 전체를 한꺼번에 suspend coroutine 하라는 키워드를 지정할 수 있는데 그것이 바로 suspend이다.</p>
+</li>
+<li>
+<p>함수 앞에 suspend를 붙히면 그 함수 전체는 job 또는 deferred의 기준으로 자동으로 continuation section을 컴파일러가 만들어줌</p>
+</li>
+<li>
+<p>우리는 cps 스타일 위에 sequence 시스템이 어떻게 움직이는지 suspend coroutine 함수가 시스템에 어떤 영향을 끼치는지 그 시스템을 추상화 해서 어떠한 구조로 만들어서 언어가 그위에 구축되어져 있는지 배움</p>
+</li>
+<li>
+<p>밑의 코드는 지금까지의 지식을 바탕으로 아까 sequence가 만들어내던 yield 함수가 suspend coroutine을 쓰는걸 직접 써보자는 것임 직접 우리가 yield함수를 흉내내서</p>
+</li>
+<li>
+<p>밑의 함수는 컴파일러에게 명령을 내리는 함수이다. 얘가 등장하는 순간 continuation switch section을 나눠줌 suspendCoroutine은  인자로 continuation을 받음 컴파일러가 만들어준 continuation을 받을 수가 있음. 이 섹션을 더이상 진행할지 말지는 cont.resume으로 결정한다. resume일때 값을 리턴한다. block은 T를 넘길수 있는 함수를 인자로 받는 함수이다. 그렇기 때문에 밑의 코드에 블록 안에 있는 cont.resume(it)는 T를 넘길 수 있는 함수이다.</p>
+</li>
+<li>
+<p>suspend 함수는 컴파일러가 이 전체를 suspendCoroutine이나 suspendCoroutine을 추상화 하고 있는 job 또는 deferred를 기준으로 switch를 나눠줌</p>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="kotlin"><pre class="language-kotlin"><code class="language-kotlin">suspsend <span class="token keyword">fun</span> <span class="token operator">&lt;</span>T<span class="token operator">></span>task<span class="token operator">:</span><span class="token punctuation">(</span>block<span class="token operator">:</span><span class="token punctuation">(</span><span class="token punctuation">(</span>T<span class="token punctuation">)</span><span class="token operator">-></span>Unit<span class="token punctuation">)</span><span class="token operator">-></span>Unit<span class="token punctuation">)</span><span class="token operator">:</span>T <span class="token operator">=</span> suspsnedCoroutine<span class="token punctuation">{</span>
+    con<span class="token operator">:</span>Continuation<span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token operator">-></span>block<span class="token punctuation">{</span>cont<span class="token punctuation">.</span><span class="token function">resume</span><span class="token punctuation">(</span>it<span class="token punctuation">)</span><span class="token punctuation">}</span> <span class="token comment">//얘가 b가 됨</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">suspend</span> <span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>task<span class="token punctuation">{</span><span class="token function">it</span><span class="token punctuation">(</span><span class="token string">"b"</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>  <span class="token comment">// ((T->Unit)->Unit 여기의 it은 (T->Unit)에 해당 </span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"c"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>//코틀린 빌더 이미지</p>
+<h3 id="2feelings"><a href="#2feelings" aria-label="2feelings permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2.Feelings</h3>
+<h3 id="3findings"><a href="#3findings" aria-label="3findings permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.Findings</h3>
+<h3 id="4future-action-plan"><a href="#4future-action-plan" aria-label="4future action plan permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.Future Action Plan</h3>
+<h3 id="5feedback"><a href="#5feedback" aria-label="5feedback permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5.FeedBack</h3></div><div class="social-share"><a class="resp-sharing-button__link" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook"><div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--large"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"></path></svg></div><span class="service-label">Share on Facebook</span></div></a><a class="resp-sharing-button__link" href="#" rel="noopener" aria-label="Share on Twitter"><div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--large"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z"></path></svg></div><span class="service-label">Share on Twitter</span></div></a></div><div class="sponsor-button"><a class="bmc-button" target="_blank" rel="noopener noreferrer" href="https://www.buymeacoffee.com/jbee"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"/><span>Buy me a coffee</span></a></div><hr class="custom-hr"/><div class="bio"><div class="author"><div class="author-description"><div class="author-image gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:72px;height:72px;border-radius:100%"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsSAAALEgHS3X78AAADJUlEQVQozxVS22scZRwd3/yTpK2XJx8EhWqpRKPENktMs26zl2ya7M7MzszO5ZvrN9997skmpmksQSVVG0ILCqElxtIXIZiWCn3wQSgEfK4TOJyX3++cA4cjKSgaQL/GagRuBaDvgyXX6oFxFxhtS+t7hoK9tqMt2loHjDuuueiYHeC0gdu2bQnmLEoxzLEvIsAihwauiB0GHRq5PHZ4bJHApqFFfAsDiwAD2Xo81mJ9BDUpXRNJxfJJsn67LDbSbJ2LitIckQzhFOKac0IyQgvOylSsF7zKWMHOkVMpr1BWoKrCW9v5zo74dptnVZzkkKWhSKHIQpb6NAmo8FlyDp4FLA14HrEUSuUaK0qcl6SoSFXiqoBFHooEMG4T7pxraos0FhlKCpLkJM2RqMWJV1+l2rvOEWnIEpenHk/OA2vmwuO1mFtEOIg5mAGcuEh4JAlJAnECiYgkymxMTEIdRCyIjBjpCOuYjhF1KHM4B5xZjBmMaoLplBmYGojoMdEjbEgMa4zoGOsEGxiNcayjSI3DAQwHCI0QHsd13xgI5gkKBLU5tTixKDJQrEkCjgSUU6zyWBFYzbhRFUFRt0VdCrV6AYG3GoZyFI0iaBBsM2ITZCI4RpEh7W6wnTUy4aCMRxQsp7EC5NZm5prqSko0CuWw3o7T9+xujXpBMBziSEFQ9T1Z2hTm7oQcP7z35NcDVVMvXrowc/kDOJbfe/t9X2nvlm79cLvwSmYm8SgES761yOCQxzKJBtLh3uTolztnp8ev/zk53P/+3UsXW1c/Er4lvfHmBDn/PTs++e3e88f3nz26/9fhz3tbWF6+Nliev7PODn7clp4+vPvkYOfF0f7fR/vPH/2Uh6byTWOTB+9ceKvxxWcv/3hwdnp0dvr7q5PH//55+PTB3QkeOYOv9zbCHypPGq1ed7UmsnvCX3FHzQk2tri5QXRPad1qNVy1+V3m7G2iCdGzYDDsfKX2ZrV+w1iZG3a/lObnPlzufd5auNJtTy3Mf3Kj8fHKzZml5tRgcVruzXQWPm02rii969Zwvt+a7t6YVpdmF65dbs9Nyd3Z/wFbkvbQmaC5FgAAAABJRU5ErkJggg==" alt="Zero1" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition:opacity 0.5s;transition-delay:0.25s"/><noscript><picture><img width="72" height="72" srcset="/static/edd376b69dcb197ba3a021f9e5667718/f53aa/profile.png 1x,
+/static/edd376b69dcb197ba3a021f9e5667718/0ccf0/profile.png 1.5x,
+/static/edd376b69dcb197ba3a021f9e5667718/34113/profile.png 2x,
+/static/edd376b69dcb197ba3a021f9e5667718/5584e/profile.png 3x" src="/static/edd376b69dcb197ba3a021f9e5667718/f53aa/profile.png" alt="Zero1" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><div class="author-name"><span class="author-name-prefix">Written by</span><a class="author-name-content" href="/about"><span>@<!-- -->Zero1</span></a><div class="author-introduction">This blog is for that I organize what I study and my thinking, feeling and experience.</div><p class="author-socials"><a href="https://github.com/https://github.com/2Zero1">GitHub</a></p></div></div></div></div><ul class="navigator"><li><a rel="prev" href="/til/2020-02-04/">← <!-- -->2020-02-04 TIL</a></li><li><a rel="next" href="/study/booklist/">Book List<!-- --> →</a></li></ul><div><div id="disqus_thread"></div></div><div class="utterences"></div><footer class="footer">©<a href="https://github.com/JaeYeopHan">Jbee</a>, Built with<!-- --> <a href="https://github.com/JaeYeopHan/gatsby-starter-bee">Gatsby-starter-bee</a></footer></div></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', '', 'auto', {});
+      
+      
+      
+      }
+      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-blog-post-js","jsonName":"til-2020-02-05-312","path":"/til/2020-02-05/"};window.dataPath="900/path---til-2020-02-05-312-0ce-w061Ah9WhMv4fpT8aNhcH44zvM";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-c1d808c791d1d4008dc1.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-a18ee2e380e155324722.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-1a55bdf98ae22e9514e5.js"],"component---src-pages-404-js":["/component---src-pages-404-js-6564d205621fd4993a44.js"],"component---src-pages-about-js":["/component---src-pages-about-js-ae66ee9a5eed2f62bca3.js"],"component---src-pages-index-js":["/component---src-pages-index-js-ff2be123b72f66ae4f47.js"],"pages-manifest":["/pages-manifest-c0546dc930363bce0f59.js"]};/*]]>*/</script><script src="/webpack-runtime-981fab9d83abf2eb96ac.js" async=""></script><script src="/styles-7eb353320ebda5af989c.js" async=""></script><script src="/1-892fbe677f8ab292f801.js" async=""></script><script src="/app-c1d808c791d1d4008dc1.js" async=""></script><script src="/12-9f154328fece47bbe0f5.js" async=""></script><script src="/component---src-templates-blog-post-js-1a55bdf98ae22e9514e5.js" async=""></script><script src="/2-1f8bb2e9086b2d0c088c.js" async=""></script></body></html>
