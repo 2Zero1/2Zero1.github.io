@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Zero1's Note]]></title><description><![CDATA[Blog posted about ...]]></description><link>https://github.com/2Zero1</link><generator>RSS for Node</generator><lastBuildDate>Fri, 28 Feb 2020 14:39:48 GMT</lastBuildDate><item><title><![CDATA[Kotlin의 asSequence]]></title><description><![CDATA[asSequence 의 특징 1. kotlin 에서 iterable을 상속한 모든 객체는 asSequence 메소드를 사용하여 sequence 형태로 변할 수 있다. 밑의 signature는 asSequence가 Iterable < T…]]></description><link>https://github.com/2Zero1/study/asSequence/</link><guid isPermaLink="false">https://github.com/2Zero1/study/asSequence/</guid><content:encoded>&lt;h2 id=&quot;assequence-의-특징&quot;&gt;&lt;a href=&quot;#assequence-%EC%9D%98-%ED%8A%B9%EC%A7%95&quot; aria-label=&quot;assequence 의 특징 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;asSequence 의 특징&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Zero1's Note]]></title><description><![CDATA[Blog posted about ...]]></description><link>https://github.com/2Zero1</link><generator>RSS for Node</generator><lastBuildDate>Sat, 29 Feb 2020 07:36:29 GMT</lastBuildDate><item><title><![CDATA[Kotlin의 asSequence]]></title><description><![CDATA[asSequence 의 특징 1. kotlin 에서 iterable을 상속한 모든 객체는 asSequence 메소드를 사용하여 sequence 형태로 변할 수 있다. 밑의 signature는 asSequence가 Iterable < T…]]></description><link>https://github.com/2Zero1/study/asSequence/</link><guid isPermaLink="false">https://github.com/2Zero1/study/asSequence/</guid><content:encoded>&lt;h2 id=&quot;assequence-의-특징&quot;&gt;&lt;a href=&quot;#assequence-%EC%9D%98-%ED%8A%B9%EC%A7%95&quot; aria-label=&quot;assequence 의 특징 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;asSequence 의 특징&lt;/h2&gt;
 &lt;h3 id=&quot;1-kotlin-에서-iterable을-상속한-모든-객체는-assequence-메소드를-사용하여-sequence-형태로-변할-수-있다-밑의-signature는-assequence가-iterablet의-확장함수로-정의되어져-있는것을-볼-수-있다&quot;&gt;&lt;a href=&quot;#1-kotlin-%EC%97%90%EC%84%9C-iterable%EC%9D%84-%EC%83%81%EC%86%8D%ED%95%9C-%EB%AA%A8%EB%93%A0-%EA%B0%9D%EC%B2%B4%EB%8A%94-assequence-%EB%A9%94%EC%86%8C%EB%93%9C%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC-sequence-%ED%98%95%ED%83%9C%EB%A1%9C-%EB%B3%80%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8B%A4-%EB%B0%91%EC%9D%98-signature%EB%8A%94-assequence%EA%B0%80-iterablet%EC%9D%98-%ED%99%95%EC%9E%A5%ED%95%A8%EC%88%98%EB%A1%9C-%EC%A0%95%EC%9D%98%EB%90%98%EC%96%B4%EC%A0%B8-%EC%9E%88%EB%8A%94%EA%B2%83%EC%9D%84-%EB%B3%BC-%EC%88%98-%EC%9E%88%EB%8B%A4&quot; aria-label=&quot;1 kotlin 에서 iterable을 상속한 모든 객체는 assequence 메소드를 사용하여 sequence 형태로 변할 수 있다 밑의 signature는 assequence가 iterablet의 확장함수로 정의되어져 있는것을 볼 수 있다 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. kotlin 에서 iterable을 상속한 모든 객체는 asSequence 메소드를 사용하여 sequence 형태로 변할 수 있다. 밑의 signature는 asSequence가 Iterable&amp;#x3C;T&gt;의 확장함수로 정의되어져 있는것을 볼 수 있다&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;T&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; Iterable&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;T&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;asSequence&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Sequence&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;T&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; Sequence &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;iterator&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
@@ -159,69 +159,7 @@
         &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;asSequence를 사용하여 메서드를 channing 하는 방식이 위와같은 방법으로 구현되어져 있다.&lt;/p&gt;
-&lt;p&gt;내가 보면서 발견한 것은 위의 방법에는 데코레이션 패턴이 적용되어져 있다는 것이다. 매번 자신과 같은 타입을 인자값(위에서는 sequence)으로 넘기고, 각각들이 동일한 인터페이스를 다르게 구현하며, 메소드의 실행이 데코레이션에 들어간 각각의 객체들에게 채이닝 되는 현상을 볼 수 있었다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[CS 기초]]></title><description><![CDATA[정수의 표현 자바에서는 int를 4byte로 표현한다. 32bit 중에 가장 높은 자리수의 비트는 sign bit로 사용된다. 0이면 양수 1이면 음수. signed 정수의 범위는 -2147483648 ~ 2147483647 이다. 양의 정수는 0x…]]></description><link>https://github.com/2Zero1/study/CS Basic/</link><guid isPermaLink="false">https://github.com/2Zero1/study/CS Basic/</guid><content:encoded>&lt;h2 id=&quot;정수의-표현&quot;&gt;&lt;a href=&quot;#%EC%A0%95%EC%88%98%EC%9D%98-%ED%91%9C%ED%98%84&quot; aria-label=&quot;정수의 표현 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;정수의 표현&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;자바에서는 int를 4byte로 표현한다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;32bit 중에 가장 높은 자리수의 비트는 sign bit로 사용된다. 0이면 양수 1이면 음수.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;signed 정수의 범위는 -2147483648 ~ 2147483647 이다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;양의 정수는 0x00000001 ~ 0x7fffffff(2147483647) 까지이다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;음의 정수는 0xffffffff(-1) ~ 0x80000000(-2147483648) 까지이다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;-1을 16진수로 표현하기 위해선 0x00000001(1)에 2의 보수를 취해주면 0xffffffff이다.&lt;/li&gt;
-&lt;li&gt;-2을 16진수로 표현하기 위해선  0x00000002(2)에 2의 보수를 취해주면 0xfffffffe이다.(-2 이다.)&lt;/li&gt;
-&lt;li&gt;이것으로 볼때 음수는 0xffffffff부터 시작해서 1씩 빠지면서 감소한다.&lt;/li&gt;
-&lt;li&gt;그렇기 때문에 0x80000001은 -2147483647의 결과값이 나온다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;0을 기준으로 표현한다면 0x80000000(-2147483648) ~ 0xffffffff(-1) ~ 0 ~ 0x00000001 ~ 0x7fffffff(2147483647) 이다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Integer.compareUnsigned(int a, int b)의 내부를 살펴보면 Integer의 최솟값(-2147483648 = 0x80000000)을 a와 b에 각각 더해서 compare 함수를 실행한다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;위의 함수는 unsigned된 int만을 사용해서 비교하는 값이다.&lt;/li&gt;
-&lt;li&gt;a는 -1을 b는 2를 입력해보자. 이 결과에선 -1이 나와야 하는 상황이다. ( a &amp;#x3C; b -&gt; -1),(a &gt; b -&gt; 1), (a = b -&gt; 0)&lt;/li&gt;
-&lt;li&gt;그래서 음수를 입력할 경우에 -2147483648(0x80000000) + (- 1)이 되고 계산해보면 a = 0x7ffffffff(2147483647)이 된다.&lt;/li&gt;
-&lt;li&gt;다음으로 그리고 다음 파라미터에는 +2를 넣어보면 0x80000000(-2147483648) + 2가 될것이고, 결과값은 b = 0x80000002(-2147483646)이 될것이다.&lt;/li&gt;
-&lt;li&gt;결과값을 보면 a &gt; b의 결과가 나오므로 1이 리턴이 되는 상황이 발생한다.&lt;/li&gt;
-&lt;li&gt;이런 문제가 발생하기 때문에 반드시 signed가 아닌 unsigned 이 함수를 이용하여 정상적인 동작을 기대하기 위해선integer의 값만 넣어야한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;양의-정수는-최대값-0x7fffffff-까지-양수이다가-1을-하면서-0x80000000-2147483648-쵯소값으로-변환한다&quot;&gt;&lt;a href=&quot;#%EC%96%91%EC%9D%98-%EC%A0%95%EC%88%98%EB%8A%94-%EC%B5%9C%EB%8C%80%EA%B0%92-0x7fffffff-%EA%B9%8C%EC%A7%80-%EC%96%91%EC%88%98%EC%9D%B4%EB%8B%A4%EA%B0%80-1%EC%9D%84-%ED%95%98%EB%A9%B4%EC%84%9C-0x80000000-2147483648-%EC%B5%AF%EC%86%8C%EA%B0%92%EC%9C%BC%EB%A1%9C-%EB%B3%80%ED%99%98%ED%95%9C%EB%8B%A4&quot; aria-label=&quot;양의 정수는 최대값 0x7fffffff 까지 양수이다가 1을 하면서 0x80000000 2147483648 쵯소값으로 변환한다 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;양의 정수는 최대값 0x7fffffff 까지 양수이다가 +1을 하면서 0x80000000(-2147483648) 쵯소값으로 변환한다&lt;/h3&gt;
-&lt;h2 id=&quot;1의-보수&quot;&gt;&lt;a href=&quot;#1%EC%9D%98-%EB%B3%B4%EC%88%98&quot; aria-label=&quot;1의 보수 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1의 보수&lt;/h2&gt;
-&lt;p&gt;이진수의 모든 자리의 숫자를 반전 시키면 1의 보수를 얻을 수 있다.
-1의 보수는 대부분의 산술연산에서 원래 숫자의 음수처럼 취급된다.&lt;/p&gt;
-&lt;p&gt;00010011 - 11111100 =  00010000 이라면
-값을 구하기 위해 뺄 값 (11111100) 에 1의 보수를 취하여 더해준다.
-11111100 -&gt; 00000011 이 된다.&lt;/p&gt;
-&lt;p&gt;0010011 + 0000011 = 1 00001111 의 값이 나오며, 한자릿수가 더 길어졌다.
-그런 경우엔 마지막에 1을 더한 값이 결과값이다.
-00001111 + 00000001 = 00010000 의 값이 된다.&lt;/p&gt;
-&lt;p&gt;하지만 부호 전환은 2의 보수보다 쉽지만, 덧셈과 뺄셈은 더 어렵다.&lt;/p&gt;
-&lt;h2 id=&quot;2의-보수&quot;&gt;&lt;a href=&quot;#2%EC%9D%98-%EB%B3%B4%EC%88%98&quot; aria-label=&quot;2의 보수 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2의 보수&lt;/h2&gt;
-&lt;p&gt;이진수의 모든 자리의 숫자를 반전 시킨 뒤 여기에 1을 더하면 2의 보수를 얻을 수 있다.
-2의 보수는 대부분의 산술연산에서 원래 숫자의 음수처럼 취급된다.&lt;/p&gt;
-&lt;p&gt;01001011 의 모든 자리의 수를 반전시킨다.&lt;/p&gt;
-&lt;p&gt;10110100 (이것을 1의 보수라고 부른다)&lt;/p&gt;
-&lt;p&gt;여기에 1을 더한다.
-10110100(180) + 00000001(1) = 10110101(181)&lt;/p&gt;
-&lt;p&gt;그러면 100-75 의 값을 구해보자.&lt;/p&gt;
-&lt;p&gt;100 -&gt; 01100100
-75 -&gt; 01001011 (2의 보수로 변경) -&gt; 10110100 + 00000001 = 10110101&lt;/p&gt;
-&lt;p&gt;01100100 + 10110101 = 1 00011001 의 결과가 나온다.
-결과값은 00011001이다.&lt;/p&gt;
-&lt;p&gt;2의 보수를 사용한 연산에서 가장 높은 자리에서 자리올림이 발생하면 무시한다.
-그렇기 때문에 1의 보수 보다 계산이 빠르다&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Array와 List]]></title><description><![CDATA[Array 데이터를 관리할 수 있는 Data Structure이다. index…]]></description><link>https://github.com/2Zero1/study/Array &amp; List/</link><guid isPermaLink="false">https://github.com/2Zero1/study/Array &amp; List/</guid><content:encoded>&lt;h2 id=&quot;array&quot;&gt;&lt;a href=&quot;#array&quot; aria-label=&quot;array permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Array&lt;/h2&gt;
+&lt;p&gt;내가 보면서 발견한 것은 위의 방법에는 데코레이션 패턴이 적용되어져 있다는 것이다. 매번 자신과 같은 타입을 인자값(위에서는 sequence)으로 넘기고, 각각들이 동일한 인터페이스를 다르게 구현하며, 메소드의 실행이 데코레이션에 들어간 각각의 객체들에게 채이닝 되는 현상을 볼 수 있었다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Array와 List]]></title><description><![CDATA[Array 데이터를 관리할 수 있는 Data Structure이다. index…]]></description><link>https://github.com/2Zero1/study/Array &amp; List/</link><guid isPermaLink="false">https://github.com/2Zero1/study/Array &amp; List/</guid><content:encoded>&lt;h2 id=&quot;array&quot;&gt;&lt;a href=&quot;#array&quot; aria-label=&quot;array permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Array&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;데이터를 관리할 수 있는 Data Structure이다.&lt;/li&gt;
 &lt;li&gt;index가 존재해서 데이터를 빠르게 가져올 수 있다.&lt;/li&gt;
@@ -337,7 +275,163 @@
 &lt;li&gt;함께 자라기&lt;/li&gt;
 &lt;li&gt;깃 프로&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://blog.naver.com/wikiware/100042152479&quot;&gt;https://blog.naver.com/wikiware/100042152479&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[2020-02-28 TIL]]></title><description><![CDATA[할 일 목록 웹지탱 완독 부동 소수점에 대해서 정리한다. Expressions, Statements, and Blocks 정리 완료하지 못한 목록 완료 목록 웹지탱 시험 & 스터디 코어 자바 9 공부 웹지탱 독서 5Fs 1. Fact…]]></description><link>https://github.com/2Zero1/til/2020-02-28/</link><guid isPermaLink="false">https://github.com/2Zero1/til/2020-02-28/</guid><pubDate>Fri, 28 Feb 2020 23:16:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;할-일-목록&quot;&gt;&lt;a href=&quot;#%ED%95%A0-%EC%9D%BC-%EB%AA%A9%EB%A1%9D&quot; aria-label=&quot;할 일 목록 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;할 일 목록&lt;/h2&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[CS 기초]]></title><description><![CDATA[정수의 표현 자바에서는 int를 4byte로 표현한다. 32bit 중에 가장 높은 자리수의 비트는 sign bit로 사용된다. 0이면 양수 1이면 음수. signed 정수의 범위는 -2147483648 ~ 2147483647 이다. 양의 정수는 0x…]]></description><link>https://github.com/2Zero1/study/CS Basic/</link><guid isPermaLink="false">https://github.com/2Zero1/study/CS Basic/</guid><content:encoded>&lt;h2 id=&quot;정수의-표현&quot;&gt;&lt;a href=&quot;#%EC%A0%95%EC%88%98%EC%9D%98-%ED%91%9C%ED%98%84&quot; aria-label=&quot;정수의 표현 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;정수의 표현&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;자바에서는 int를 4byte로 표현한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;32bit 중에 가장 높은 자리수의 비트는 sign bit로 사용된다. 0이면 양수 1이면 음수.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;signed 정수의 범위는 -2147483648 ~ 2147483647 이다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;양의 정수는 0x00000001 ~ 0x7fffffff(2147483647) 까지이다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;음의 정수는 0xffffffff(-1) ~ 0x80000000(-2147483648) 까지이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;-1을 16진수로 표현하기 위해선 0x00000001(1)에 2의 보수를 취해주면 0xffffffff이다.&lt;/li&gt;
+&lt;li&gt;-2을 16진수로 표현하기 위해선  0x00000002(2)에 2의 보수를 취해주면 0xfffffffe이다.(-2 이다.)&lt;/li&gt;
+&lt;li&gt;이것으로 볼때 음수는 0xffffffff부터 시작해서 1씩 빠지면서 감소한다.&lt;/li&gt;
+&lt;li&gt;그렇기 때문에 0x80000001은 -2147483647의 결과값이 나온다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;0을 기준으로 표현한다면 0x80000000(-2147483648) ~ 0xffffffff(-1) ~ 0 ~ 0x00000001 ~ 0x7fffffff(2147483647) 이다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Integer.compareUnsigned(int a, int b)의 내부를 살펴보면 Integer의 최솟값(-2147483648 = 0x80000000)을 a와 b에 각각 더해서 compare 함수를 실행한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;위의 함수는 unsigned된 int만을 사용해서 비교하는 값이다.&lt;/li&gt;
+&lt;li&gt;a는 -1을 b는 2를 입력해보자. 이 결과에선 -1이 나와야 하는 상황이다. ( a &amp;#x3C; b -&gt; -1),(a &gt; b -&gt; 1), (a = b -&gt; 0)&lt;/li&gt;
+&lt;li&gt;그래서 음수를 입력할 경우에 -2147483648(0x80000000) + (- 1)이 되고 계산해보면 a = 0x7ffffffff(2147483647)이 된다.&lt;/li&gt;
+&lt;li&gt;다음으로 그리고 다음 파라미터에는 +2를 넣어보면 0x80000000(-2147483648) + 2가 될것이고, 결과값은 b = 0x80000002(-2147483646)이 될것이다.&lt;/li&gt;
+&lt;li&gt;결과값을 보면 a &gt; b의 결과가 나오므로 1이 리턴이 되는 상황이 발생한다.&lt;/li&gt;
+&lt;li&gt;이런 문제가 발생하기 때문에 반드시 signed가 아닌 unsigned 이 함수를 이용하여 정상적인 동작을 기대하기 위해선integer의 값만 넣어야한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;양의-정수는-최대값-0x7fffffff-까지-양수이다가-1을-하면서-0x80000000-2147483648-쵯소값으로-변환한다&quot;&gt;&lt;a href=&quot;#%EC%96%91%EC%9D%98-%EC%A0%95%EC%88%98%EB%8A%94-%EC%B5%9C%EB%8C%80%EA%B0%92-0x7fffffff-%EA%B9%8C%EC%A7%80-%EC%96%91%EC%88%98%EC%9D%B4%EB%8B%A4%EA%B0%80-1%EC%9D%84-%ED%95%98%EB%A9%B4%EC%84%9C-0x80000000-2147483648-%EC%B5%AF%EC%86%8C%EA%B0%92%EC%9C%BC%EB%A1%9C-%EB%B3%80%ED%99%98%ED%95%9C%EB%8B%A4&quot; aria-label=&quot;양의 정수는 최대값 0x7fffffff 까지 양수이다가 1을 하면서 0x80000000 2147483648 쵯소값으로 변환한다 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;양의 정수는 최대값 0x7fffffff 까지 양수이다가 +1을 하면서 0x80000000(-2147483648) 쵯소값으로 변환한다&lt;/h3&gt;
+&lt;h2 id=&quot;1의-보수&quot;&gt;&lt;a href=&quot;#1%EC%9D%98-%EB%B3%B4%EC%88%98&quot; aria-label=&quot;1의 보수 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1의 보수&lt;/h2&gt;
+&lt;p&gt;이진수의 모든 자리의 숫자를 반전 시키면 1의 보수를 얻을 수 있다.
+1의 보수는 대부분의 산술연산에서 원래 숫자의 음수처럼 취급된다.&lt;/p&gt;
+&lt;p&gt;00010011 - 11111100 =  00010000 이라면
+값을 구하기 위해 뺄 값 (11111100) 에 1의 보수를 취하여 더해준다.
+11111100 -&gt; 00000011 이 된다.&lt;/p&gt;
+&lt;p&gt;0010011 + 0000011 = 1 00001111 의 값이 나오며, 한자릿수가 더 길어졌다.
+그런 경우엔 마지막에 1을 더한 값이 결과값이다.
+00001111 + 00000001 = 00010000 의 값이 된다.&lt;/p&gt;
+&lt;p&gt;하지만 부호 전환은 2의 보수보다 쉽지만, 덧셈과 뺄셈은 더 어렵다.&lt;/p&gt;
+&lt;h2 id=&quot;2의-보수&quot;&gt;&lt;a href=&quot;#2%EC%9D%98-%EB%B3%B4%EC%88%98&quot; aria-label=&quot;2의 보수 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2의 보수&lt;/h2&gt;
+&lt;p&gt;이진수의 모든 자리의 숫자를 반전 시킨 뒤 여기에 1을 더하면 2의 보수를 얻을 수 있다.
+2의 보수는 대부분의 산술연산에서 원래 숫자의 음수처럼 취급된다.&lt;/p&gt;
+&lt;p&gt;01001011 의 모든 자리의 수를 반전시킨다.&lt;/p&gt;
+&lt;p&gt;10110100 (이것을 1의 보수라고 부른다)&lt;/p&gt;
+&lt;p&gt;여기에 1을 더한다.
+10110100(180) + 00000001(1) = 10110101(181)&lt;/p&gt;
+&lt;p&gt;그러면 100-75 의 값을 구해보자.&lt;/p&gt;
+&lt;p&gt;100 -&gt; 01100100
+75 -&gt; 01001011 (2의 보수로 변경) -&gt; 10110100 + 00000001 = 10110101&lt;/p&gt;
+&lt;p&gt;01100100 + 10110101 = 1 00011001 의 결과가 나온다.
+결과값은 00011001이다.&lt;/p&gt;
+&lt;p&gt;2의 보수를 사용한 연산에서 가장 높은 자리에서 자리올림이 발생하면 무시한다.
+그렇기 때문에 1의 보수 보다 계산이 빠르다&lt;/p&gt;
+&lt;h2 id=&quot;소수의-표현&quot;&gt;&lt;a href=&quot;#%EC%86%8C%EC%88%98%EC%9D%98-%ED%91%9C%ED%98%84&quot; aria-label=&quot;소수의 표현 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;소수의 표현&lt;/h2&gt;
+&lt;h3 id=&quot;고정-소수점-fixed-point&quot;&gt;&lt;a href=&quot;#%EA%B3%A0%EC%A0%95-%EC%86%8C%EC%88%98%EC%A0%90-fixed-point&quot; aria-label=&quot;고정 소수점 fixed point permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;고정 소수점 (Fixed Point)&lt;/h3&gt;
+&lt;p&gt;부호비트(1) + 정수비트(15) + 소수부비트(16) 으로 총 32비트로 이루어져 있다.&lt;/p&gt;
+&lt;p&gt;고정 소수점은 소수점을 사용하여 고정된 자리수의 소수를 나타내는 것이다. 한정된 메모리에서 부동 소수점 방식보다 좁은 범위의 수만 나타낼 수 있다.&lt;/p&gt;
+&lt;p&gt;부동 소수점의 표현 방식은 숫자를 표현하는데 있어서 일정한 유효숫자를 보장한다는 장점이 있따. 반면 고정 소수점 방식은 밑수 뿐 아니라 지수 값도 미리 결정해두고 사용하는 방식이다. 따라서 정수형 자료형을 기반으로 표현할 수 있다. 연산 장치에 따라서 부동 소수점을 지원하지 않는 경우에는 이러한 방식으로 소수점을 표현해야한다. 또한, 정수형 자료형의 연산은 부동소수점 자료형의 연산보다 빠르게 할 수 있다는 장점이 있다. 부동소수점은 곱셈이 간편하고, 소수점은 덧셈/뺄셈이 간편하다는 차이를 보인다.&lt;/p&gt;
+&lt;h3 id=&quot;부동-소수점&quot;&gt;&lt;a href=&quot;#%EB%B6%80%EB%8F%99-%EC%86%8C%EC%88%98%EC%A0%90&quot; aria-label=&quot;부동 소수점 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;부동 소수점&lt;/h3&gt;
+&lt;p&gt;float은 부호비트(1) + 지수비트(8) + 가수비트(23) 으로 총 32비트로 구성되어져 있다.&lt;/p&gt;
+&lt;p&gt;float 방식은 실수를 컴퓨터 상에서 근사하여 표현할 때 소수점의 위치를 고정하지 않고 그 위치를 나타내는 수를 따로 적는 것으로, 유효숫자를 나타내는 기수와 소수점의 위치ㅡㄹ 풀이하는 지수로 나누어 표현한다.&lt;/p&gt;
+&lt;p&gt;컴퓨터에서는 고정 소수점 방식보다 넓은 범위의 수를 나타낼 수 있어 과학기술 계산에 많이 이용되지만, 근삿값으로 표현되며 고정 소수점 방식보다 연산 속도가 느리기 때문에 전용 연산 장치를 두는 경우가 많다. 고정 소수점과 달리 정수 부분과 소수 부분의 자릿수가 일정하지 않으나, 유효 숫자의 자릿수는 정해져 있다.&lt;/p&gt;
+&lt;h4 id=&quot;계산-방법&quot;&gt;&lt;a href=&quot;#%EA%B3%84%EC%82%B0-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;계산 방법 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;계산 방법&lt;/h4&gt;
+&lt;p&gt;13.5를 32비트로 변환해본다.&lt;/p&gt;
+&lt;p&gt;10 진수로 표현된 정수와 소수를 32 bit의 floating 방식으로 표현하기 위해선 10진수를 2진수화 해야한다.
+정수 : 13 -&gt; 1101               8 4 2 1 -&gt; 1101
+소수 : 0.5 -&gt; 1000              0.5 0.25 0.125. 0.625 -&gt; 1
+결과값 : 1101.1&lt;/p&gt;
+&lt;p&gt;2진수화를 한 후에는 컴퓨터가 정규화 작업을 해야한다. 소수점 자리 위로 1만 남겨놓고 모두 소수로 표현한다.&lt;/p&gt;
+&lt;p&gt;1101.1 -&gt; 1.1011 * 2^3 로 표현할 수 있다.&lt;/p&gt;
+&lt;p&gt;그렇다면 위의 과정을 통해 다음과 같은 float 표기법의 요소를 얻을 수 있다.
+부호 : 0, 지수 : 3, 가수 1101&lt;/p&gt;
+&lt;p&gt;하지만 지수는 음수와 양수로 나올 수 있는데 어떻게 표시를 할 수 있을까 ?
+8비트가 나타낼 수 있는 수는 256 비트인데 이것의 대략 반인 127 을 기준으로 더했을 때 , 127보다 크면 양수, 작으면 음수로 나타낼 수 있다.&lt;/p&gt;
+&lt;p&gt;그러면 부호비트에는 0을 넣는다.&lt;/p&gt;
+&lt;p&gt;지수 비트는 3(지수값) + 127(bias)를 구하여 이진수화 하여 10000010 의 값을 얻을 수 있다.
+128(1) 64(0) 32(0) 16(0) 8(0) 4(0) 2(1) 1(0)
+지수비트는 10000010을 넣는다.
+가수부는 1011을 가수부에 해당하는 가장 상위단부터 넣어준다.&lt;/p&gt;
+&lt;p&gt;0(부호) 10000010(지수) 10110000000000000000000(가수) 의 결과값을 얻을 수 있다.&lt;/p&gt;
+&lt;h4 id=&quot;부동소수점은-근삿값으로-표현된다&quot;&gt;&lt;a href=&quot;#%EB%B6%80%EB%8F%99%EC%86%8C%EC%88%98%EC%A0%90%EC%9D%80-%EA%B7%BC%EC%82%BF%EA%B0%92%EC%9C%BC%EB%A1%9C-%ED%91%9C%ED%98%84%EB%90%9C%EB%8B%A4&quot; aria-label=&quot;부동소수점은 근삿값으로 표현된다 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;부동소수점은 근삿값으로 표현된다&lt;/h4&gt;
+&lt;p&gt;아까 소수점을 표현하기 위해서 정수와는 좀 다른 방법을 사용한 것을 잠깐 보았을 것이다.
+0.75를 2진수화 시켜보면 0.11란 결과값을 얻을 수 있다.
+0.5(1) 0.25(1) 0.125(0) 0.0625(0)
+위에서 보면 2진수로 정확한 표현을 할 수 있는 10진수로 표현된 소수점은 0.5, 0.25, 0.125, 0.0625 … 와 같은 패턴을 가진 소수밖에 없다.&lt;/p&gt;
+&lt;p&gt;그렇다면 십진수로 표현된 0.1은 어떻게 이진수로 표현할 수 있을까 ?
+근사값으로 표시를 한다. 그렇기 때문에 부동소수점은 수학적으로 정확한 계산을 하기 위해선 적합하지 않다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/%EB%B6%80%EB%8F%99%EC%86%8C%EC%88%98%EC%A0%90&quot;&gt;https://ko.wikipedia.org/wiki/%EB%B6%80%EB%8F%99%EC%86%8C%EC%88%98%EC%A0%90&lt;/a&gt; &lt;sup id=&quot;fnref-위키백과&quot;&gt;&lt;a href=&quot;#fn-위키백과&quot; class=&quot;footnote-ref&quot;&gt;위키백과&lt;/a&gt;&lt;/sup&gt;
+&lt;a href=&quot;https://ko.wikipedia.org/wiki/%EA%B3%A0%EC%A0%95%EC%86%8C%EC%88%98%EC%A0%E2%82%A9%90&quot;&gt;https://ko.wikipedia.org/wiki/%EA%B3%A0%EC%A0%95%EC%86%8C%EC%88%98%EC%A0₩%90&lt;/a&gt; &lt;sup id=&quot;fnref-위키백과&quot;&gt;&lt;a href=&quot;#fn-위키백과&quot; class=&quot;footnote-ref&quot;&gt;위키백과&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[java의 expression, statement, block]]></title><description><![CDATA[Expressions Expresion은 variables, operators, method invocations 들로 이루어진 construct 이며 하나의 단일 값 이다. expression으로 인해 반환된 value의 data type…]]></description><link>https://github.com/2Zero1/study/java의 statement, expression, block/</link><guid isPermaLink="false">https://github.com/2Zero1/study/java의 statement, expression, block/</guid><content:encoded>&lt;h2 id=&quot;expressions&quot;&gt;&lt;a href=&quot;#expressions&quot; aria-label=&quot;expressions permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Expressions&lt;/h2&gt;
+&lt;p&gt;Expresion은 variables, operators, method invocations 들로 이루어진 construct 이며 하나의 단일 값 이다.&lt;/p&gt;
+&lt;p&gt;expression으로 인해 반환된 value의 data type은 expression에서 사용된 elements에 결정된다. cadence = 0 은 cadence가 정수를 리턴한다. 이경우 cadence는 정수타입이다. assignment operator가 왼쪽  피연산자와 동일한 데이터 유형의 값을 반환한다. 다른 expressions에서도 cadence 가 boolean 또는 String 타입이라면 cadence의 데이터타입의 값을 리턴한다.&lt;/p&gt;
+&lt;p&gt;java는 표현식들의 데이타 타입이 일치한다면 밑의 코드와 같이 여러 작은 표현식들을 사용하여 복합적인 expressions를 만들 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;expression을 사용할 땐 연산자 우선순위를 고려해야한다. 그렇기 때문에 명확하게 사용하기 위해서 bracket을 명시적으로 표시해줘야한다.&lt;/p&gt;
+&lt;h2 id=&quot;statements&quot;&gt;&lt;a href=&quot;#statements&quot; aria-label=&quot;statements permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Statements&lt;/h2&gt;
+&lt;p&gt;statements는 실제 언어로 사용하는 문장들과 거의 비슷하다. statement 한 완전한 실행 유닛을 형성한다. 밑에있는 종류의 expression 세미콜론을 사용하여 표현식을 종료하고 statement로 만들 수 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Assignment expreesions&lt;/li&gt;
+&lt;li&gt;Any use of ++ or —&lt;/li&gt;
+&lt;li&gt;Method invocations&lt;/li&gt;
+&lt;li&gt;Object creation expression&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;밑의 statements 들은 expression statement라고 불린다&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// assignment statement&lt;/span&gt;
+aValue &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8933.234&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// increment statement&lt;/span&gt;
+aValue&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// method invocation statement&lt;/span&gt;
+System&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Hello World!&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;//object creation statement&lt;/span&gt;
+Bicycle myBike &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Bicycle&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;추가적으로 expression statements에는 declaration statements와 control flow statements 가 존재한다.&lt;/p&gt;
+&lt;p&gt;declaration statement 는 변수를 선언한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// declaration statement&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;double&lt;/span&gt; aValue &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8933.234&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;코드는 위에서 아래로 순서대로 실행이 된다. 하지만 control statements는 branch와 looping을 만들어 프로그램이 상태에 따라 실행이 되도록 한다.&lt;/p&gt;
+&lt;p&gt;decision-making statements&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;if -then&lt;/li&gt;
+&lt;li&gt;if -then-else&lt;/li&gt;
+&lt;li&gt;switch&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;looping statements&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;for&lt;/li&gt;
+&lt;li&gt;while&lt;/li&gt;
+&lt;li&gt;do-while&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;branch statements&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;break&lt;/li&gt;
+&lt;li&gt;continue&lt;/li&gt;
+&lt;li&gt;return&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;blocks&quot;&gt;&lt;a href=&quot;#blocks&quot; aria-label=&quot;blocks permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Blocks&lt;/h2&gt;
+&lt;p&gt;block은 중괄호 사이에 0개 이상의 statement로 구성된 그룹이며 단일 문이 허용되는 모든곳에서 사용할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;BlockDemo&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+     &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;String&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;token keyword&quot;&gt;boolean&lt;/span&gt; condition &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;condition&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// begin block 1&lt;/span&gt;
+               System&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Condition is true.&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// end block one&lt;/span&gt;
+          &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// begin block 2&lt;/span&gt;
+               System&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Condition is false.&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// end block 2&lt;/span&gt;
+     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[No title]]></title><link>https://github.com/2Zero1/til/2020-02-29/</link><guid isPermaLink="false">https://github.com/2Zero1/til/2020-02-29/</guid><content:encoded></content:encoded></item><item><title><![CDATA[2020-02-28 TIL]]></title><description><![CDATA[할 일 목록 웹지탱 완독 부동 소수점에 대해서 정리한다. Expressions, Statements, and Blocks 정리 완료하지 못한 목록 완료 목록 웹지탱 완독 5Fs 1. Fact 쟈바의 Expressions, Statements, and…]]></description><link>https://github.com/2Zero1/til/2020-02-28/</link><guid isPermaLink="false">https://github.com/2Zero1/til/2020-02-28/</guid><pubDate>Fri, 28 Feb 2020 23:16:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;할-일-목록&quot;&gt;&lt;a href=&quot;#%ED%95%A0-%EC%9D%BC-%EB%AA%A9%EB%A1%9D&quot; aria-label=&quot;할 일 목록 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;할 일 목록&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;웹지탱 완독&lt;/li&gt;
 &lt;li&gt;부동 소수점에 대해서 정리한다.&lt;/li&gt;
@@ -346,18 +440,74 @@
 &lt;h2 id=&quot;완료하지-못한-목록&quot;&gt;&lt;a href=&quot;#%EC%99%84%EB%A3%8C%ED%95%98%EC%A7%80-%EB%AA%BB%ED%95%9C-%EB%AA%A9%EB%A1%9D&quot; aria-label=&quot;완료하지 못한 목록 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;완료하지 못한 목록&lt;/h2&gt;
 &lt;h2 id=&quot;완료-목록&quot;&gt;&lt;a href=&quot;#%EC%99%84%EB%A3%8C-%EB%AA%A9%EB%A1%9D&quot; aria-label=&quot;완료 목록 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;완료 목록&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;웹지탱 시험 &amp;#x26; 스터디&lt;/li&gt;
-&lt;li&gt;코어 자바 9 공부&lt;/li&gt;
-&lt;li&gt;웹지탱 독서&lt;/li&gt;
+&lt;li&gt;웹지탱 완독&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;5fs&quot;&gt;&lt;a href=&quot;#5fs&quot; aria-label=&quot;5fs permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;5Fs&lt;/h2&gt;
 &lt;h3 id=&quot;1-fact&quot;&gt;&lt;a href=&quot;#1-fact&quot; aria-label=&quot;1 fact permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Fact&lt;/h3&gt;
-&lt;h4 id=&quot;웹을-지탱하는-기술-시험&quot;&gt;&lt;a href=&quot;#%EC%9B%B9%EC%9D%84-%EC%A7%80%ED%83%B1%ED%95%98%EB%8A%94-%EA%B8%B0%EC%88%A0-%EC%8B%9C%ED%97%98&quot; aria-label=&quot;웹을 지탱하는 기술 시험 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;웹을 지탱하는 기술 시험&lt;/h4&gt;
-&lt;h4 id=&quot;코어자바-9&quot;&gt;&lt;a href=&quot;#%EC%BD%94%EC%96%B4%EC%9E%90%EB%B0%94-9&quot; aria-label=&quot;코어자바 9 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;코어자바 9&lt;/h4&gt;
+&lt;h4 id=&quot;쟈바의-expressions-statements-and-blocks&quot;&gt;&lt;a href=&quot;#%EC%9F%88%EB%B0%94%EC%9D%98-expressions-statements-and-blocks&quot; aria-label=&quot;쟈바의 expressions statements and blocks permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;쟈바의 Expressions, Statements, and Blocks&lt;/h4&gt;
+&lt;h5 id=&quot;expressions&quot;&gt;&lt;a href=&quot;#expressions&quot; aria-label=&quot;expressions permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Expressions&lt;/h5&gt;
+&lt;p&gt;Expresion은 variables, operators, method invocations 들로 이루어진 construct 이며 하나의 단일 값 이다.&lt;/p&gt;
+&lt;p&gt;expression으로 인해 반한된 value의 data type은 expression에서 사용된 elements에 결정된다. cadence = 0 은 cadence가 int이고 assignment operator가 cadence와 동일한 데이터 유형의 값을 반환한다. 다른 expressions에서도 cadence 가 boolean 또는 String 타입이라면 cadence의 데이터타입의 값을 리턴한다.&lt;/p&gt;
+&lt;p&gt;java는 표현식들의 데이타 타입이 일치한다면 밑의 코드와 같이 여러 작은 표현식들을 사용하여 복합적인 expressions를 만들 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;expression을 사용할 땐 연산자 우선순위를 고려해야한다. 그렇기 때문에 명확하게 사용하기 위해서 bracket을 명시적으로 표시해줘야한다.&lt;/p&gt;
+&lt;h5 id=&quot;statements&quot;&gt;&lt;a href=&quot;#statements&quot; aria-label=&quot;statements permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Statements&lt;/h5&gt;
+&lt;p&gt;statements는 실제 언어로 사용하는 문장들과 거의 비슷하다. statement 한 완전한 실행 유닛을 형성한다. 밑에있는 종류의 expression 세미콜론을 사용하여 표현식을 종료하고 statement로 만들 수 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Assignment expreesions&lt;/li&gt;
+&lt;li&gt;Any use of ++ or —&lt;/li&gt;
+&lt;li&gt;Method invocations&lt;/li&gt;
+&lt;li&gt;Object creation expression&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;밑의 statements 들은 expression statement라고 불린다&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// assignment statement&lt;/span&gt;
+aValue &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8933.234&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// increment statement&lt;/span&gt;
+aValue&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// method invocation statement&lt;/span&gt;
+System&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Hello World!&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;//object creation statement&lt;/span&gt;
+Bicycle myBike &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Bicycle&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;추가적으로 expression statements에는 declaration statements와 control flow statements 가 존재한다.&lt;/p&gt;
+&lt;p&gt;declaration statement 는 변수를 선언한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// declaration statement&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;double&lt;/span&gt; aValue &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8933.234&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;코드는 위에서 아래로 순서대로 실행이 된다. 하지만 control statements는 branch와 looping을 만들어 프로그램이 상태에 따라 실행이 되도록 한다.&lt;/p&gt;
+&lt;p&gt;decision-making statements&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;if -then&lt;/li&gt;
+&lt;li&gt;if -then-else&lt;/li&gt;
+&lt;li&gt;switch&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;looping statements&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;for&lt;/li&gt;
+&lt;li&gt;while&lt;/li&gt;
+&lt;li&gt;do-while&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;branch statements&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;break&lt;/li&gt;
+&lt;li&gt;continue&lt;/li&gt;
+&lt;li&gt;return&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&quot;blocks&quot;&gt;&lt;a href=&quot;#blocks&quot; aria-label=&quot;blocks permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Blocks&lt;/h5&gt;
+&lt;p&gt;block은 중괄호 사이에 0개 이상의 statement로 구성된 그룹이며 단일 문이 허용되는 모든곳에서 사용할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;BlockDemo&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+     &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;String&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;token keyword&quot;&gt;boolean&lt;/span&gt; condition &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;condition&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// begin block 1&lt;/span&gt;
+               System&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Condition is true.&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// end block one&lt;/span&gt;
+          &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// begin block 2&lt;/span&gt;
+               System&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Condition is false.&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// end block 2&lt;/span&gt;
+     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id=&quot;2feelings&quot;&gt;&lt;a href=&quot;#2feelings&quot; aria-label=&quot;2feelings permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2.Feelings&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;언어를 공부하면서 왜 이렇게 되는지 깊게 공부해보았는데 컴퓨터 전공 시간에 배웠던 내용들이 모두 사용되어서 그때 공부 열심히 할껄 후회했다..&lt;/li&gt;
-&lt;li&gt;그래도 하나 하나 깊게 파보면서 이게 논리적으로 왜 이렇게 되는지 직접 확인 하면서 공부하니까 재미있고 명확한 느낌을 받았다.&lt;/li&gt;
+&lt;li&gt;코로나가 점점 더 심해져서 파주로 왔다. 근데 오늘 너무 띵가띵가 놀아버렸다.. 내일부터 열심히 해야하는데 할 수 있을까 여자친구가 부른다.&lt;/li&gt;
+&lt;li&gt;대대적인 방 청소를 하였는데 집이 꽤 쾌적해져서 기분이 좋다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;3findings&quot;&gt;&lt;a href=&quot;#3findings&quot; aria-label=&quot;3findings permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3.Findings&lt;/h3&gt;
 &lt;h3 id=&quot;4future-action-plan&quot;&gt;&lt;a href=&quot;#4future-action-plan&quot; aria-label=&quot;4future action plan permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;4.Future Action Plan&lt;/h3&gt;
