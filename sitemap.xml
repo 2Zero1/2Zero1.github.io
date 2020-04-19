@@ -10,7 +10,6 @@
 <url> <loc>https://github.com/2Zero1/study/코어자바 4장/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://github.com/2Zero1/study/코어자바 3장/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://github.com/2Zero1/study/booklist/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://github.com/2Zero1/study/코틀린 델리게이트/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://github.com/2Zero1/study/코틀린 스트림/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://github.com/2Zero1/study/코틀린 함수형/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://github.com/2Zero1/study/kotlin continuation &amp; cps/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -25,9 +24,12 @@
 <url> <loc>https://github.com/2Zero1/study/그림으로배우는네트워크4/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://github.com/2Zero1/study/그림으로배우는네트워크5/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://github.com/2Zero1/study/코틀린 스터디 코루틴/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://github.com/2Zero1/study/그림으로 배우는 HTTP &amp; Network Basic2/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://github.com/2Zero1/study/그림으로배우는네트워크1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://github.com/2Zero1/study/그림으로배우는네트워크3/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://github.com/2Zero1/study/코틀린 델리게이트/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://github.com/2Zero1/study/하루3분 네트워크1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://github.com/2Zero1/study/그림으로 배우는 HTTP &amp; Network Basic2/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://github.com/2Zero1/study/하루3분 네트워크2/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://github.com/2Zero1/til/2020-04-17/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://github.com/2Zero1/til/2020-04-16/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://github.com/2Zero1/til/2020-04-15/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
