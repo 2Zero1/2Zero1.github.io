@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Zero1's Note]]></title><description><![CDATA[Blog posted about ...]]></description><link>https://github.com/2Zero1</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 25 Apr 2021 15:23:30 GMT</lastBuildDate><item><title><![CDATA[Array와 List]]></title><description><![CDATA[Array 데이터를 관리할 수 있는 Data Structure이다. index…]]></description><link>https://github.com/2Zero1/study/Array &amp; List/</link><guid isPermaLink="false">https://github.com/2Zero1/study/Array &amp; List/</guid><content:encoded>&lt;h2 id=&quot;array&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#array&quot; aria-label=&quot;array permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Array&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Zero1's Note]]></title><description><![CDATA[Blog posted about ...]]></description><link>https://github.com/2Zero1</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 25 Apr 2021 15:32:54 GMT</lastBuildDate><item><title><![CDATA[Array와 List]]></title><description><![CDATA[Array 데이터를 관리할 수 있는 Data Structure이다. index…]]></description><link>https://github.com/2Zero1/study/Array &amp; List/</link><guid isPermaLink="false">https://github.com/2Zero1/study/Array &amp; List/</guid><content:encoded>&lt;h2 id=&quot;array&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#array&quot; aria-label=&quot;array permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Array&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;데이터를 관리할 수 있는 Data Structure이다.&lt;/li&gt;
 &lt;li&gt;index가 존재해서 데이터를 빠르게 가져올 수 있다.&lt;/li&gt;
@@ -5766,6 +5766,29 @@ b&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&q
 &lt;li&gt;프로젝트 부분 계속해서 문제 있는 부분을 개선한다. 테스트를 어떻게 해야할지 모르는 부분은 리뷰어님들에게 직접 질문해봐야겠다.&lt;/li&gt;
 &lt;li&gt;프로 자바스크립트 테크닉 책을 50 페이지 읽고 코드를 쳐보면서 실습한다.&lt;/li&gt;
 &lt;li&gt;위의 목표들을 일별로 나눠 일정을 세운다.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;나의 문제 점들과 해결할 패턴&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;하다가 뭔가 잘 안되면 시간이 지연되고 기분이 나빠지는 문제&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;무엇이 잘 안된다면 진정하고 문제가 정확하게 무엇인지 파악한 후에 어떻게 해결할지 계획(학습을 한다던지 찾아본다던지)을 세우고 진행한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;목표를 다 이루지 못했다면 기분이 나빠지는 문제&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;진정하고 무엇이 목표를 다 이루지 못하게 하는 문제였는지 고민해보고 나의 방법에 문제가 있다면 동일한 문제가 발생할 경우 어떻게 해야 좋을지 패턴을 만들고 실천함. 화내지 말고 자책하지 말것.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;매번 내가 잘하고 있는지 의심하는 문제&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;학습을 하거나 어떤 행위를 할때 내가 어떻게 공부할 것인지 기록해둘것. 해본 후에 어떤점이 안좋았다면 다른 방법을 이용해보며 그것 또한 기록할것. 내가 좋은 결과를 내기 위해 어떤 방법으로 할지 기록하고 매번 피드백을 할것.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;</content:encoded></item><item><title><![CDATA[코드숨 리액트 회고]]></title><description><![CDATA[1…]]></description><link>https://github.com/2Zero1/retrospectives/코드숨 회고/</link><guid isPermaLink="false">https://github.com/2Zero1/retrospectives/코드숨 회고/</guid><pubDate>Wed, 21 Apr 2021 23:16:00 GMT</pubDate><content:encoded>&lt;p&gt;12주간의 긴 여정이 드디어 끝이났다. 길고도 짧았던.. 나에겐 많은 것이 남은 시간이었다.
