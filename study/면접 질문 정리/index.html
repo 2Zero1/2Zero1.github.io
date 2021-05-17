@@ -66,8 +66,18 @@
 <li>
 <p>비동기 프로그래밍</p>
 <ol>
-<li>동기형 프로그래밍이란 ?</li>
-<li>비동기형 프로그래밍이란 ?</li>
+<li>
+<p>동기형 프로그래밍이란 ?</p>
+<ul>
+<li>함수가 실행이 완료되면 return을 받아 사용하는것.</li>
+</ul>
+</li>
+<li>
+<p>비동기형 프로그래밍이란 ?</p>
+<ul>
+<li>함수가 실행이 완료되면 callback이 불리는것.</li>
+</ul>
+</li>
 <li>
 <p>ajax란 무엇인가</p>
 <ul>
@@ -132,7 +142,7 @@
 <li>string, number, bigint, boolean, undefined, symbol</li>
 <li>겉보기엔 null도 원시값처럼 보이지만 사실 모든 Object, 모든 구조화된 자료형은 프로토 타입 체인에 따라 null의 자손이다.</li>
 <li>원시값은 불변하여 변형할 수 없다.</li>
-<li>원시값 자체와, 원시값을 할당한 변수를 혼동하지 않아야한다. 변수는 새오누 값을 다시 할당할 수 있지만, 이미 생성한 원시 값은 객체, 배열, 함수와 달리 변형할 수 없다. 예로 변수에 영어 string을 넣어놓고 toUpperCase() 함수를  실행한 후 변수를 찍어보면 변하지 않음을 볼 수 있다.</li>
+<li>원시값 자체와, 원시값을 할당한 변수를 혼동하지 않아야한다. 변수는 새로운 값을 다시 할당할 수 있지만, 이미 생성한 원시 값은 객체, 배열, 함수와 달리 변형할 수 없다. 예로 변수에 영어 string을 넣어놓고 toUpperCase() 함수를  실행한 후 변수를 찍어보면 변하지 않음을 볼 수 있다.</li>
 </ul>
 </li>
 </ol>
@@ -166,10 +176,49 @@
 <li>자바스크립트의 내부 함수는 일반 함수, 메소드, 콜백함수 어디에서 선언되었든지 this는 전역 객체를 가르킨다. 일반 함수의 this는 window를 가르키며, 화살표 함수의 this는 언제나 상위 스코프의 this를 가리킨다.</li>
 </ul>
 </li>
-<li>call, apply, bind 함수의 차이</li>
+<li>
+<p>call, apply, bind 함수의 차이(다 찾아보기.)</p>
+<ul>
+<li>this를 바인딩하기 위한 방법이다.</li>
+<li>call은 this 바인딩 하면서 함수를 호출한다. 두번쨰 인자를 apply와 다르게 하나씩 넘긴다.</li>
+<li>apply는 this를 바인딩 하면서 함수를 호출한다. 두번쨰 인자가 배열이다.</li>
+<li>bind는 함수를 호출하는 것이 아닌 this가 바인딩된 새로운 함수를 리턴한다.</li>
+</ul>
+</li>
 <li>use strict모드란</li>
 </ol>
 </li>
+<li>
+<p>프런트엔드 빌드 시스템</p>
+<ol>
+<li>
+<p>바벨이란</p>
+<ul>
+<li>transpiler로 최신 js를 브라우저들이 지원하지 않는 경우가 있어서 지원할 수 있는 이전 버전의 js 코드로 변경해주는 것.</li>
+</ul>
+</li>
+<li>
+<p>폴리필이란</p>
+<ul>
+<li></li>
+</ul>
+</li>
+<li>
+<p>eslint란</p>
+<ul>
+<li>코딩 스타일 가이드를 따르지 않거나 문제가 있는 코드나 안티 패턴을 찾기 위해 사용하는 것.</li>
+</ul>
+</li>
+<li>prettier란</li>
+<li>웹 태스크 매니저란?</li>
+</ol>
+</li>
+<li>웹팩이란?</li>
+<li>모듈 번들러란?</li>
+<li>cos란? cors를 해결하기 위한 방법은 ? </li>
+<li>restAPI란 ? </li>
+<li>ci,cd란 ? </li>
+<li></li>
 </ol></div><div class="social-share"><a class="resp-sharing-button__link" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook"><div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--large"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"></path></svg></div><span class="service-label">Share on Facebook</span></div></a><a class="resp-sharing-button__link" href="#" rel="noopener" aria-label="Share on Twitter"><div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--large"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z"></path></svg></div><span class="service-label">Share on Twitter</span></div></a></div><div class="sponsor-button"><a class="bmc-button" target="_blank" rel="noopener noreferrer" href="https://www.buymeacoffee.com/jbee"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"/><span>Buy me a coffee</span></a></div><hr class="custom-hr"/><div class="bio"><div class="author"><div class="author-description"><div class="author-image gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:72px;height:72px;border-radius:100%"><img aria-hidden="true" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsSAAALEgHS3X78AAAEQUlEQVQ4yxVT228UdRSev8P4YGKCQR99MBJIfDDypgiWAAbNIrT2trttabfb7e7Mzl5mZmdnfvP7ze8+szO7vQArBWnBiKUIkUu1pEQDVAVFBUkwjYkXfDQ6JF9Ocr6c831fTnKUAnTywMk5Zs6xJ5pGgrGGOWrVR4xqtq5n6uV0TUvXygPlqRJuVgVOJ7xZzRi1rGUpBvPqFFQJMAWqM6+CQYKyD3TfKUNHhU0NWqqXwJ52qvmGWmjqeVvLN0qTtqrQmNNY4BbxQ+xxx+Wuyx2HOUD6IMBNBh2BgcSuJF7IYci8gMOAAUGSAUV2hGwTEbPWfDi/MNs+3onngjAhY8JaEEuPSM8XHpIeChCSyJeIhJhGiWWoyMiTLU8GoNWyux+1jnX5qaXo2MmwNYPDDuMh4gFkEgjp8MAh3Ma8SXgTM4vwhtKeYVGbRG0Wt0WnE7RjfzZ2osCWQUNIE9M6ZiYVNpUekx6XLpeAB4BLT4ZICSMcRjAIXRmCoOUGEYpiFkUkjlBCCmkz/lSCUAMnthJQCVmSJUAsJAoLXB56IoSJJOU2FRYVjSQYEYAJl/Fk2aa8wbiVRMDcRNSApI6YhbihUGYSWsOkhqnl0wbCJvQrCCdtHZG6TwyfWJSajNUZrTKqM1rBWCNEY0xXMK4RUvP9KkIVCMse1Dyv7LklDxQQKvq+hvyKh6qENTCxsW9SbEjeENQUpK4wpDJfE1SnvsZwhSRauMawgWENe7pn54E96YNpBIsAFIFXdr3EycTYJNhSJNIFLAe+loDDInanuD/NsZYcPAqdOCaBAATqPlBBs+A2p4BbcJ2i46jA1ZS5wJsVzQjXY7/agmoLFjtE67CydLTQV7vzND+ejYTBSQXYBdvI2cZRxxx3GxNNc1y5sCDOn55ZPj1/tttenJPCrQz0pww998b2V2jyJmqu98BB38p1WEl4UxIVha+71oRjjjWNUaVNVFMdun5u/sE3q4/vbqxdXjnY++FLL27d8uwzVxfnet7e/9zzLw+nDq50+ZkYnImdpTn0SZefbIOFGah8e2XxytLsD18u/3Vv7cmP6/8+2jge0R3bXk3tfG15lg/2HVYUZXK4779Ht3/fWP315qWH6xc3b1/7eW3l4c1LyuNbl39ZX/nt1hebG9c371zbvHP1wY3lfHawZ+frlZHBmprfuuWFfbt33bv+6R/ff/X3vRv/3L/5592n9cn9dUWCKaeSmaX6+RPk84Xw47az1HEvn2pd6LLVs50zHTiU2rdj23Z1fGj1XPu7K0s/rZ3/+uLJG5+duLrYUXJHD+jFI/XSwNHMgdp0f3EiNXB4l13K2MV0cTQFayPEHIthydXTmb7dQM8ye9LShiqTffXpPiWV2jk8uGti7N3M0J7R7N5sZm964J3eQ28Wxz4ojKSyvXtG+nv6D701Nrw/3bdn8HDPxPB7TTVdmTwyNfL+/80VpTLk0SXKAAAAAElFTkSuQmCC" alt="Zero1" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms"/><noscript><picture><source srcset="/static/edd376b69dcb197ba3a021f9e5667718/e5b88/profile.png 1x,
 /static/edd376b69dcb197ba3a021f9e5667718/e7bd6/profile.png 1.5x,
 /static/edd376b69dcb197ba3a021f9e5667718/a12fc/profile.png 2x" /><img loading="lazy" width="72" height="72" srcset="/static/edd376b69dcb197ba3a021f9e5667718/e5b88/profile.png 1x,
