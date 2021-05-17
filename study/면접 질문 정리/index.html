@@ -66,12 +66,61 @@
 <li>
 <p>비동기 프로그래밍</p>
 <ol>
-<li>비동기 프로그래밍이란?</li>
-<li>ajax란 무엇인가</li>
+<li>동기형 프로그래밍이란 ?</li>
+<li>비동기형 프로그래밍이란 ?</li>
+<li>
+<p>ajax란 무엇인가</p>
+<ul>
 <li>Javascript의 라이브러리로 Asynchronous Javascript and Xml의 약자이다.</li>
 <li>브라우저가 갖고 있는 XMLHttpRequest 객체를 이용해 전체 페이지를 새로 고치지 않고도 페이지의 일부만을 위한 데이터를 로드 하는 기법이며 javascript를 사용한 비동기 통신, 클라이언트와 서버간에 xml 데이터를 주고 받는 기술이다.</li>
 <li>자바스크립트를 이용해 비동기적으로 서버와 브라우저가 데이터를 교환할 수 있는 통신 방식.</li>
-<li>promise와 callback의 차이점</li>
+</ul>
+</li>
+<li>
+<p>promise와 callback의 차이점</p>
+<ul>
+<li>둘다 async 처리를 위해 사용되며, callback은 언제 불릴지 모른다는 특징이있다. 그렇기 때문에 동기식처럼 보기 편하게 작성하고 순서를 보장하기 위해선 불가피하게 콜백지옥이 나오게된다. 하지만 promise는 then을 사용하여 실행할 시점을 정할 수 있다는 특징이 있다. 이러한 특징은 콜백을 사용하게 됨으로 발생하는 콜백을 연속적으로 사용되야 하는 문제점을 해결할 수 있다.</li>
+</ul>
+</li>
+<li>
+<p>async, await에 대해 설명해 보시오</p>
+<ul>
+<li>promise를 더욱 쉽게 사용할 수 있도록 es2017 문법으로 나왔다.</li>
+<li>promise로 이전 promise의 응답값에 의존하는 promise를 사용하면 generator와 promise를 같이 쓰게되는데 그때 generator와 이를 사용하는 실행기가 필요하다. 하지만 실행기는 단순히 promise 대기를 가정하는 제너레이터만 와도 돌아가는 일반적인 실행기이다. 일반적으로 이 상황을 일반화 시켜 언어에 내장시킨것이 async await이다.</li>
+<li>제너레이터를 만드는데 사용되는 *의 위치에 async를 넣고, yield를 사용하는 부분에 await를 붙혀 사용한다.</li>
+</ul>
+</li>
+<li>
+<p>제너레이터란 ?</p>
+<ul>
+<li>iterator를 사용하는 쪽은 편하지만 공급하는 쪽은 복잡하다. generator는 iterator를 쉽게 만들어 주는 기능을 한다.</li>
+<li>제너레이터 함수를 호출할때마다 이터레이터가 만들어지며 이는 이터러블이기도 하다.</li>
+<li>제너레이터 안에서 yield를 쓸 수 있으며 이터레이터의 next가 반환되는 것 같은 효과를 일으킬 수 있고, 다음 실행의 인자값을 줄 수도 있다.</li>
+<li>함수는 한번 실행되고 끝나는데 제너레이터는 중간에 끊고 나올 수 있는 기능을 한다. 이를 코루틴이라고 한다.</li>
+<li>이터레이터는 스코프를 이용한 자유변수나 인스턴스의 변수로 관리했어야 했는데, 제너레이터는 지역변수 갱신으로 관리해서 훨씬 보기 편해진다.</li>
+</ul>
+</li>
+<li>
+<p>iterator란 ?</p>
+<ul>
+<li>next 키를 갖고, 값으로 인자를 받지 않고 interatorResultObject를 반환하는 함수가 온다.</li>
+<li>IteratorResultObject는 value와 done이라는 키를 갖고 있다.</li>
+<li>이중 done은 계속 반복할 수 있을지 없을지에 따라 불린값을 반환한다.</li>
+</ul>
+</li>
+<li>
+<p>iterable이란 ?</p>
+<ul>
+<li>Symbol.iterator라는 키를 갖고 값으로 인자를 받지 않고 Iterator Object를 반환하는 함수가 온다.</li>
+<li>둘을 나눈 이유는 iterator는 한번 다 까면 루프를 못돌기 때문에, iterable이 iterator를 생성해준다.</li>
+<li>이 둘이 나온 이유는 statement(문) 반복문은 메모리에 남지 않기 때문에 loop를 메모리에 넣고 객체화 시킬 수 있게 해줌. 그래서 반복문이 여러번 있을때 사용할 필요가 없어짐.</li>
+<li>그럼 함수로 하면 되지 않을까 ? 이거에 대한 답변 생각해보기.</li>
+<li>반복을 할지 말지에 대한 내용도 들어 있고, 반복할때마다 뭘 할지도 들어 있다. 이것을 self discription이라 한다.</li>
+<li>반복을 하진 않지만 외부에서 iterator를 반복하기 위해 필요한 조건과 실행을 전부 다 갖고 있으며. for of은 iterator를 위한것.</li>
+<li>iterator 인터페이스를 따르면 destructure, spread, rest 기능을 사용할 수 있다.</li>
+<li>내장 객체중 대표적인 iterator 객체로 배열, string이 있다.</li>
+</ul>
+</li>
 </ol>
 </li>
 <li>
@@ -88,8 +137,21 @@
 </li>
 </ol>
 </li>
-<li>자바스크립트 hoisting</li>
-<li>clusure</li>
+<li>
+<p>자바스크립트 hoisting</p>
+<ul>
+<li>함수 안에 있는 선언들을 모두 끌어 올려서 해당 함수 유효 범위의 최상단에 선언하는것을 말한다.</li>
+<li>자바스크립트는 parser가 함수 실행 전 해당 함수를 한번 훑고 함수 안에 존재하는 변수/함수선언에 대한 정보를 기억하고 있다가 실행 시킨다.</li>
+<li>유효 범위는 함수 블록 안에서 유효하다.</li>
+<li>호이스팅 대상으로 var변수와 함수 선언이 있으며 할당은 끌어올려지지 않는다.</li>
+</ul>
+</li>
+<li>
+<p>clusure</p>
+<ul>
+<li>함수가 만들어지는 시점에 블록 밖의 변수를 캡처하는 기능이 있는데 이를 지역 변수처럼 쓸 수 있다. 하지만 지역변수도 인자도 아니며 이것을 자유변수라고 한다. 자유변수가 사용되는 갖혀진 공간을 클로저라고 한다.</li>
+</ul>
+</li>
 <li>가비지 컬렉터의 역할과 동작 방법</li>
 <li>순환참조란? 해결방법</li>
 <li>자바스크립트의 배열이 실제 자료구조 배열이 아니다?</li>
@@ -98,7 +160,12 @@
 <li>
 <p>this</p>
 <ol>
-<li>자바스크립트에서 this는 몇가지로 추론되는지</li>
+<li>
+<p>자바스크립트에서 this는 몇가지로 추론되는지</p>
+<ul>
+<li>자바스크립트의 내부 함수는 일반 함수, 메소드, 콜백함수 어디에서 선언되었든지 this는 전역 객체를 가르킨다. 일반 함수의 this는 window를 가르키며, 화살표 함수의 this는 언제나 상위 스코프의 this를 가리킨다.</li>
+</ul>
+</li>
 <li>call, apply, bind 함수의 차이</li>
 <li>use strict모드란</li>
 </ol>
@@ -107,7 +174,7 @@
 /static/edd376b69dcb197ba3a021f9e5667718/e7bd6/profile.png 1.5x,
 /static/edd376b69dcb197ba3a021f9e5667718/a12fc/profile.png 2x" /><img loading="lazy" width="72" height="72" srcset="/static/edd376b69dcb197ba3a021f9e5667718/e5b88/profile.png 1x,
 /static/edd376b69dcb197ba3a021f9e5667718/e7bd6/profile.png 1.5x,
-/static/edd376b69dcb197ba3a021f9e5667718/a12fc/profile.png 2x" src="/static/edd376b69dcb197ba3a021f9e5667718/e5b88/profile.png" alt="Zero1" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><div class="author-name"><span class="author-name-prefix">Written by</span><a class="author-name-content" href="/about"><span>@<!-- -->Zero1</span></a><div class="author-introduction">This blog is for that I organize what I study and my thinking, feeling and experience.</div><p class="author-socials"><a href="https://github.com/2Zero1">GitHub</a></p></div></div></div></div><ul class="navigator"><li><a rel="prev" href="/til/2019-11-29/">← <!-- -->2019-11-29 TIL</a></li><li><a rel="next" href="/study/자료구조 특징/">자료구조 특징<!-- --> →</a></li></ul><div><div id="disqus_thread"></div></div><div class="utterences"></div><footer class="footer">©<a href="https://github.com/JaeYeopHan">Jbee</a>, Built with<!-- --> <a href="https://github.com/JaeYeopHan/gatsby-starter-bee">Gatsby-starter-bee</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
+/static/edd376b69dcb197ba3a021f9e5667718/a12fc/profile.png 2x" src="/static/edd376b69dcb197ba3a021f9e5667718/e5b88/profile.png" alt="Zero1" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><div class="author-name"><span class="author-name-prefix">Written by</span><a class="author-name-content" href="/about"><span>@<!-- -->Zero1</span></a><div class="author-introduction">This blog is for that I organize what I study and my thinking, feeling and experience.</div><p class="author-socials"><a href="https://github.com/2Zero1">GitHub</a></p></div></div></div></div><ul class="navigator"><li><a rel="prev" href="/study/자료구조 특징/">← <!-- -->자료구조 특징</a></li><li><a rel="next" href="/til/2019-12-04/">2019-12-04 TIL<!-- --> →</a></li></ul><div><div id="disqus_thread"></div></div><div class="utterences"></div><footer class="footer">©<a href="https://github.com/JaeYeopHan">Jbee</a>, Built with<!-- --> <a href="https://github.com/JaeYeopHan/gatsby-starter-bee">Gatsby-starter-bee</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
   
   
   if(true) {
