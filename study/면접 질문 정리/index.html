@@ -200,25 +200,67 @@
 <li>
 <p>폴리필이란</p>
 <ul>
-<li></li>
+<li>폴리필(polyfill)은 웹 개발에서 기능을 지원하지 않는 웹 브라우저 상의 기능을 구현하는 코드를 뜻한다.</li>
+<li>기능을 지원하지 않는 웹 브라우저에서 원하는 기능을 구현할 수 있으나, 폴리필 플러그인 로드 때문에 시간과 트래픽이 늘어나고, 브라우저별 기능을 추가하는 것 때문에 코드가 매우 길어지고, 성능이 많이 저하된다는 단점이 있다.</li>
 </ul>
 </li>
 <li>
 <p>eslint란</p>
 <ul>
 <li>코딩 스타일 가이드를 따르지 않거나 문제가 있는 코드나 안티 패턴을 찾기 위해 사용하는 것.</li>
+<li>코딩 컨벤션에 위배되는 코드나 안티 패턴을 자동 검출 해주므로 좋다.</li>
 </ul>
 </li>
 <li>prettier란</li>
 <li>웹 태스크 매니저란?</li>
 </ol>
 </li>
-<li>웹팩이란?</li>
-<li>모듈 번들러란?</li>
-<li>cos란? cors를 해결하기 위한 방법은 ? </li>
-<li>restAPI란 ? </li>
-<li>ci,cd란 ? </li>
-<li></li>
+<li>
+<p>웹팩이란?</p>
+<ul>
+<li>최신 프런트엔드 프레임워크에서 가장 많이 사용되는 모듈 번들러.</li>
+<li>
+<p>기능</p>
+<ol>
+<li>모듈화 문제 해결(여러 js 파일을 import할때 변수 유효 범위 문제)</li>
+<li>웹 개발 작업 자동화(html, css, js, 이미지, css전 처리기 변환 등)</li>
+<li>dynamic loding &#x26; lazy loading을 지원하여 웹 반응속도를 향상시켜줌.</li>
+<li>웹에 어플리케이션에 필요한 위의 모듈들을 하나의 번들로 만들어서 브라우저별 http 요청 숫자의 제약을 피할 수 있음.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>모듈 번들러란?</p>
+<ul>
+<li>웹 어플을 구성하는 자원 (HTML, CSS, js, images 등)을 모두 모듈로 보고 이를 조합해서 병합된 하나의 결과물을 만들어주는 도구.</li>
+</ul>
+</li>
+<li>
+<p>cos란? cors를 해결하기 위한 방법은 ?</p>
+<ul>
+<li>Cross-Origin Resource Sharing으로 웹 페이지 상의 제한된 리소스를 최초 자원이 서비스된 도메인 밖의 다른 도메인으로부터 요청할 수 있게 허용하는 구조이다.</li>
+</ul>
+</li>
+<li>
+<p>restAPI란 ?</p>
+<ul>
+<li>Representational state transder는 월드 와이드 웹과 같은 분산 하이퍼미디어 시스템을 위한 소프트웨어 아키텍처의 한 형식이다.</li>
+<li>rest는 네트워크 아키텍처 원리의 모음이다.</li>
+<li>네트워크 아키텍처 원리란 자원을 정의하고 자원에 대한 주소를 지정하는 방법 전반을 일컫는다.</li>
+<li>
+<p>조건 6가지</p>
+<ol>
+<li>클라이언트/서버 : client와 server가 통신하는 클라이언트/서버의 아키텍처 스타일을 채용</li>
+<li>stateless server : 클라이언트의 앱 상태를 서버에서 관리하지 않는다.</li>
+<li>cache : 리소스의 신선도에 기초해, 한번 가져온 리소스를 클라이언트 쪽에서 돌려쓰는 방식.캐시의 장점은 서버와 클라이언트 사이의 통신량을 줄여 네트워크 대역의 이용과 처리시간을 축소하고 더욱 효율적으로 처리한다.</li>
+<li>uniform interface : URI로 지정한 리소스에 대한 조작을 통일되고 한정적인 인터페이스로 수행하는 아키텍처 스타일을 의미한다. 인터페이스의 유연성에 제약을 가함으로써 전제적인 아키텍처가 간결해진다.</li>
+<li>layered(계층화) : 시스템을 몇개의 계층으로 분리하는 아키텍처 스타일을 계층화 시스템이라고 한다. 클라이언트 측에서 보면 서버나 프록시 모두 동일한 인터페이스로 접속할 수 있어서 중간에 뭐가 있든 신경쓰지 않는다.</li>
+<li>code on demand: 프로그램 코드를 서버에서 다운받아 클라이언트에서 실행하는 아키텍처 스타일. 장점으로 클라이언트를 차후에 확장할 수 있다는 것이다.</li>
+</ol>
+</li>
+</ul>
+</li>
 </ol></div><div class="social-share"><a class="resp-sharing-button__link" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook"><div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--large"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"></path></svg></div><span class="service-label">Share on Facebook</span></div></a><a class="resp-sharing-button__link" href="#" rel="noopener" aria-label="Share on Twitter"><div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--large"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z"></path></svg></div><span class="service-label">Share on Twitter</span></div></a></div><div class="sponsor-button"><a class="bmc-button" target="_blank" rel="noopener noreferrer" href="https://www.buymeacoffee.com/jbee"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"/><span>Buy me a coffee</span></a></div><hr class="custom-hr"/><div class="bio"><div class="author"><div class="author-description"><div class="author-image gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:72px;height:72px;border-radius:100%"><img aria-hidden="true" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsSAAALEgHS3X78AAAEQUlEQVQ4yxVT228UdRSev8P4YGKCQR99MBJIfDDypgiWAAbNIrT2trttabfb7e7Mzl5mZmdnfvP7ze8+szO7vQArBWnBiKUIkUu1pEQDVAVFBUkwjYkXfDQ6JF9Ocr6c831fTnKUAnTywMk5Zs6xJ5pGgrGGOWrVR4xqtq5n6uV0TUvXygPlqRJuVgVOJ7xZzRi1rGUpBvPqFFQJMAWqM6+CQYKyD3TfKUNHhU0NWqqXwJ52qvmGWmjqeVvLN0qTtqrQmNNY4BbxQ+xxx+Wuyx2HOUD6IMBNBh2BgcSuJF7IYci8gMOAAUGSAUV2hGwTEbPWfDi/MNs+3onngjAhY8JaEEuPSM8XHpIeChCSyJeIhJhGiWWoyMiTLU8GoNWyux+1jnX5qaXo2MmwNYPDDuMh4gFkEgjp8MAh3Ma8SXgTM4vwhtKeYVGbRG0Wt0WnE7RjfzZ2osCWQUNIE9M6ZiYVNpUekx6XLpeAB4BLT4ZICSMcRjAIXRmCoOUGEYpiFkUkjlBCCmkz/lSCUAMnthJQCVmSJUAsJAoLXB56IoSJJOU2FRYVjSQYEYAJl/Fk2aa8wbiVRMDcRNSApI6YhbihUGYSWsOkhqnl0wbCJvQrCCdtHZG6TwyfWJSajNUZrTKqM1rBWCNEY0xXMK4RUvP9KkIVCMse1Dyv7LklDxQQKvq+hvyKh6qENTCxsW9SbEjeENQUpK4wpDJfE1SnvsZwhSRauMawgWENe7pn54E96YNpBIsAFIFXdr3EycTYJNhSJNIFLAe+loDDInanuD/NsZYcPAqdOCaBAATqPlBBs+A2p4BbcJ2i46jA1ZS5wJsVzQjXY7/agmoLFjtE67CydLTQV7vzND+ejYTBSQXYBdvI2cZRxxx3GxNNc1y5sCDOn55ZPj1/tttenJPCrQz0pww998b2V2jyJmqu98BB38p1WEl4UxIVha+71oRjjjWNUaVNVFMdun5u/sE3q4/vbqxdXjnY++FLL27d8uwzVxfnet7e/9zzLw+nDq50+ZkYnImdpTn0SZefbIOFGah8e2XxytLsD18u/3Vv7cmP6/8+2jge0R3bXk3tfG15lg/2HVYUZXK4779Ht3/fWP315qWH6xc3b1/7eW3l4c1LyuNbl39ZX/nt1hebG9c371zbvHP1wY3lfHawZ+frlZHBmprfuuWFfbt33bv+6R/ff/X3vRv/3L/5592n9cn9dUWCKaeSmaX6+RPk84Xw47az1HEvn2pd6LLVs50zHTiU2rdj23Z1fGj1XPu7K0s/rZ3/+uLJG5+duLrYUXJHD+jFI/XSwNHMgdp0f3EiNXB4l13K2MV0cTQFayPEHIthydXTmb7dQM8ye9LShiqTffXpPiWV2jk8uGti7N3M0J7R7N5sZm964J3eQ28Wxz4ojKSyvXtG+nv6D701Nrw/3bdn8HDPxPB7TTVdmTwyNfL+/80VpTLk0SXKAAAAAElFTkSuQmCC" alt="Zero1" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms"/><noscript><picture><source srcset="/static/edd376b69dcb197ba3a021f9e5667718/e5b88/profile.png 1x,
 /static/edd376b69dcb197ba3a021f9e5667718/e7bd6/profile.png 1.5x,
 /static/edd376b69dcb197ba3a021f9e5667718/a12fc/profile.png 2x" /><img loading="lazy" width="72" height="72" srcset="/static/edd376b69dcb197ba3a021f9e5667718/e5b88/profile.png 1x,
